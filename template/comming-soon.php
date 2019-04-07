@@ -32,11 +32,11 @@
          <div class="pt-5 text-center">
            <div class="d-flex flex-row flex-nowrap justify-content-center">
 
-             <a href="https://www.instagram.com/persian.gp/" class="mx-2" >
+             <a href="#" class="mx-2" >
                  <i class=" text-warning fab fa-telegram"></i>
              </a>
 
-             <a href="#" class="mx-2">
+             <a href="https://www.instagram.com/persian.gp/" class="mx-2">
                  <i class="fab fa-instagram text-warning"></i>
              </a>
 
