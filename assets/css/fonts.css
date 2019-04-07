@@ -1,0 +1,21 @@
+@font-face{
+    font-family:"nasim";
+    src:url('../fonts/nasim/nasim.eot');
+    src:
+        url('../fonts/nasim/nasim.woff') format("woff"),
+        url('../fonts/nasim/nasim.otf') format('opentype'),
+        url('../fonts/nasim/nasim.svg#Nasim') format('svg');
+}
+/* font size style */
+.fsm{
+  font-size: .8rem;
+}
+.fmd{
+  font-size: 1.2rem;
+}
+.flg{
+  font-size: 2rem;
+}
+.f1r5{
+  font-size:1.5rem;
+}
