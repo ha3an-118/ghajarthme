@@ -1,0 +1,114 @@
+
+
+html , body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-image: linear-gradient(to bottom,var(--color3),var(--color10));
+  background-repeat: no-repeat;
+  font-family: nasim !important;
+}
+/* -------------------------------------------------------------------------*/
+
+.dir-ltr{
+  direction: ltr !important;
+}
+.dir-rtl{
+  direction: rtl !important;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+/* ------------------------------ special css ----------------------------- */
+
+/* header  */
+.dg-header{
+  height: 70px;
+}
+.dg-logo{
+
+  height: 60px;
+}
+.dg-nav{
+  height: 40px;
+}
+/* -------------------------- baner slider -------------------------------- */
+
+.dg-baner{
+  max-height: 70% !important;
+  min-height: 70% !important;
+}
+.dg-baner img{
+  width: 100% !important;
+  max-height: 100%;
+}
+.dg-baner-txt {
+  position: absolute;
+  bottom:20%;
+  left: 0%;
+  max-width: 50%;
+}
+/* ======================================================================== */
+/* category part  */
+.car-type-category-item{
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  max-width: 15% !important;
+  display: flex;
+
+}
+
+.car-type-category-item img{
+  max-width: 80% !important;
+}
+.car-type-category-item a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ /* ======================================================================== */
+ .dg-list-group .list-group-item {
+
+   background-color : var(--color10);
+   margin-top: .3rem;
+ }
+
+ .dg-list-group .list-group-item:hover {
+
+   background-color : var(--color1);
+ }
+/*-----------------  */
+
+.dg-header-underline{
+  width: 100%;
+  height: 0;
+  border: 1px solid rgba(0,0,0,.3);
+  position: relative;
+  padding: 0;
+}
+.dg-header-underline::after{
+  content: "";
+  width: 20%;
+  height: 0;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  border: 1px solid var(--color1);;
+}
+
+/* ------------------------------ */
+.dg-segustion-item:hover{
+  box-shadow: 0 0 .5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+/* =====================================================================  */
+/* footer  */
+.dg-footer{
+  background-image: linear-gradient(var(--color12),var(--color2) );
+  background-repeat: no-repeat;
+}
