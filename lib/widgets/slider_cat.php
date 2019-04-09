@@ -52,7 +52,7 @@ class SliderCat extends WP_Widget
 
           </div>
 
-          <div class="col-11" id="sugesttion" role="slider" type="protofile" arrang="horizontal">
+          <div class="col-11" id="<?php echo esc_attr($this->get_field_id("sugesttion")) ?>" role="slider" type="protofile" arrang="horizontal">
 
             <div class="dg-segustion-group py-3 d-flex flex-row flex-nowrap " role="sliderItemsHolder">
               <?php
