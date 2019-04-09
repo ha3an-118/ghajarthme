@@ -24,6 +24,10 @@ a:hover{
   text-decoration: none;
 }
 
+.ha-list-style-none{
+  list-style: none;
+}
+
 /* ------------------------------ special css ----------------------------- */
 
 /* header  */
@@ -34,6 +38,14 @@ a:hover{
 
   height: 60px;
 }
+.ha-logo-contianer img{
+
+  height: 60px;
+  width:auto;
+
+}
+
+
 .dg-nav{
   height: 40px;
 }

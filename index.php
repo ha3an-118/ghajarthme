@@ -17,6 +17,8 @@ else :
 
 endif;
 
+dynamic_sidebar("homepage");
+
 get_footer();
 
 

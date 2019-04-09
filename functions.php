@@ -1,4 +1,5 @@
 <?php
+require_once("lib/helper_functions.php");
 
 //register menu place
 add_action('init', 'ha_register_menu');
@@ -24,6 +25,9 @@ $custom_logo_arg = array(
 add_theme_support( 'custom-logo' );
 
 add_theme_support( 'post-thumbnails' );
+
+//add post type support
+add_post_type_support( 'page', 'excerpt' );
 
 add_action( 'widgets_init', 'ha_sidebar_init' );
 
@@ -57,7 +61,9 @@ function ha_sidebar_init() {
 
 }
 
+//register widget
 
+ha_add_widget("slider_baner");
 
 
 
