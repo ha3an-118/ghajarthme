@@ -141,7 +141,7 @@
                     <?php
                       $pages = new WP_Query(array(
                         'post_type' => 'page',
-                        'post_per-page' => 0,
+                        'posts_per_page' => 0,
 
                       ));
                       if($pages->have_posts()){
@@ -179,7 +179,7 @@
             <?php
               $pages = new WP_Query(array(
                 'post_type' => 'page',
-                'post_per-page' => 0,
+                'posts_per_page' => 0,
 
               ));
               if($pages->have_posts()){

@@ -64,6 +64,7 @@ function ha_sidebar_init() {
 //register widget
 
 ha_add_widget("slider_baner");
+ha_add_widget("slider_cat");
 
 
 
