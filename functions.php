@@ -66,6 +66,6 @@ function ha_sidebar_init() {
 ha_add_widget("slider_baner");
 ha_add_widget("slider_cat");
 ha_add_widget("category_show");
-
-
+ha_add_widget("categorylist");
+ha_add_widget("slider_weblog");
  ?>
