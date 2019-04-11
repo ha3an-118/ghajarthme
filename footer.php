@@ -59,9 +59,7 @@
 </footer>
 
 
-<section class="p-5 m-5 " style="height:300px;">
 
-</section>
 
 
 
