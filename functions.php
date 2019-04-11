@@ -68,4 +68,6 @@ ha_add_widget("slider_cat");
 ha_add_widget("category_show");
 ha_add_widget("categorylist");
 ha_add_widget("slider_weblog");
+ha_add_widget("aboutus");
+
  ?>
