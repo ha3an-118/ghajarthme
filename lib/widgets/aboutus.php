@@ -22,29 +22,38 @@ class AboutUs extends WP_Widget
     );
 
     $posts = new WP_Query($queryArg);
-    ?>
-    <section class="w-100 p-0 m-0 d-flex flex-row flex-nowrap">
-        <div class="col-6">
-          <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
-        </div>
-        <div class="col-6 align-self-center">
+    if($posts->have_posts()):
+      while ($posts->have_posts()):
+          $posts->the_post();
+          ?>
+          <section class="w-100 p-0 m-0 d-flex flex-row flex-nowrap">
+              <div class="col-6">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
+              </div>
+              <div class="col-6 align-self-center">
 
-          <div class="d-flex flex-column flex-nowrap text-right justify-content-center">
+                <div class="d-flex flex-column flex-nowrap text-right justify-content-center">
 
-            <div class="flg py-3 pr-2">
-                 <?php the_title(); ?>
-            </div>
-            <div class="text-justify pr-4">
-              <?php the_content(); ?>
-            </div>
+                  <div class="flg py-3 pr-2">
+                       <?php the_title(); ?>
+                  </div>
+                  <div class="text-justify pr-4">
+                    <?php the_content(); ?>
+                  </div>
 
-          </div>
+                </div>
 
-        </div>
+              </div>
 
-    </section> <!-- end of  about us section  -->
+          </section> <!-- end of  about us section  -->
 
-    <?php
+
+
+          <?php
+
+      endwhile;
+    endif;
+
   } // end of widget function
 
   public function form($instance)
