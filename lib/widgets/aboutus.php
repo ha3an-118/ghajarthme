@@ -53,7 +53,7 @@ class AboutUs extends WP_Widget
 
       endwhile;
     endif;
-
+    wp_reset_postdata();
   } // end of widget function
 
   public function form($instance)
