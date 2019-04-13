@@ -18,6 +18,7 @@ class AboutUs extends WP_Widget
   {
     // TODO: must get the term id and get the term_id and get query form it
     $queryArg = array(
+                'post_type' => 'page',
                 'page_id' => (int)$instance['aboutus'],
     );
 
