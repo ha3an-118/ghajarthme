@@ -103,9 +103,12 @@
 
 
           <div class="col-4">
-            <form class="" action="index.html" method="post">
+            <form class="ha-top-search " action="#" method="post">
 
-                <input type="text" name="" value="" class="btn w-100">
+                <input type="text" name="" value="" class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید">
+                <button type="submit" name="button" class="submitinput btn">
+                    <i class="fa fa-search "></i>
+                </button>
 
             </form>
           </div>

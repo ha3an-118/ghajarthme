@@ -49,6 +49,27 @@ a:hover{
 .dg-nav{
   height: 40px;
 }
+/* -------------------------- top search ---------------------------------- */
+.ha-top-search {
+  display: flex;
+  height: 100% !important;
+  padding: .2rem;
+}
+.ha-top-search *{
+  border-radius: 0 !important;
+}
+.ha-top-search .textinput {
+  border-top-right-radius: .25rem !important;
+  border-bottom-right-radius: .25rem !important;
+  flex-grow:1;
+}
+.ha-top-search .submitinput{
+  border-top-left-radius: .25rem !important;
+  border-bottom-left-radius: .25rem !important;
+}
+
+
+
 /* -------------------------- baner slider -------------------------------- */
 
 .dg-baner{
