@@ -17,12 +17,12 @@ class AboutUs extends WP_Widget
   public function widget($args, $instance)
   {
     // TODO: must get the term id and get the term_id and get query form it
-    print_r($instance);
+
     $queryArg = array(
                 'page_id' => (int)$instance['aboutus'],
     );
 
-    print_r($queryArg);
+    
     $posts = new WP_Query($queryArg);
     if($posts->have_posts()):
       while ($posts->have_posts()):
