@@ -10,18 +10,19 @@ class AboutUs extends WP_Widget
   public function __construct()
   {
     parent::__construct(
-          'ha-about us',  // Base ID
+          'ha-about-us',  // Base ID
           'ha about us '   // Name
         );
     }
   public function widget($args, $instance)
   {
     // TODO: must get the term id and get the term_id and get query form it
+    print_r($instance);
     $queryArg = array(
-                'post_type' => 'page',
                 'page_id' => (int)$instance['aboutus'],
     );
 
+    print_r($queryArg);
     $posts = new WP_Query($queryArg);
     if($posts->have_posts()):
       while ($posts->have_posts()):
@@ -59,7 +60,7 @@ class AboutUs extends WP_Widget
 
   public function form($instance)
   {
-
+    print_r($instance);
     ?>
     <div class="widefat">
       <label class="widefat" for="<?php echo esc_attr($this->get_field_id("aboutus")); ?>">صفحه در باره ما را انتخاب کنید </label>
