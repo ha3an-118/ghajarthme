@@ -19,7 +19,9 @@ class CatList extends WP_Widget
     ?>
     <section class="contianer-fluid d-flex flex-row flex-nowrap mt-3">
 
-      <div class="col-9">
+      <div class="col-9 d-flex justify-content-center">
+
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/pic/car.png" alt="" class="img-fluid">
 
       </div>
 
