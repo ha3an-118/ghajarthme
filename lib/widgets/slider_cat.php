@@ -44,7 +44,8 @@ class SliderCat extends WP_Widget
           </div>
       </div>
 
-      <div class="container-fluid d-flex flex-row flex-nowrap justify-content-between">
+      <div class="container-fluid d-flex flex-row flex-nowrap justify-content-between"
+            id="<?php echo esc_attr($this->get_field_id("sugesttion")) ?>" role="slider" type="protofile" arrang="horizontal"   >
           <div class=" d-flex flex-column justify-content-center" >
             <bottom class="bg-light hover-bg-12 text-12 hover-text-3 py-3 px-2  rounded " role="nextprotofile">
               <
@@ -52,7 +53,7 @@ class SliderCat extends WP_Widget
 
           </div>
 
-          <div class="col-11" id="<?php echo esc_attr($this->get_field_id("sugesttion")) ?>" role="slider" type="protofile" arrang="horizontal">
+          <div class="col-11" >
 
             <div class="dg-segustion-group py-3 d-flex flex-row flex-nowrap " role="sliderItemsHolder">
               <?php
