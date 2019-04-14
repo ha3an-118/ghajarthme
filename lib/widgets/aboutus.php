@@ -22,14 +22,14 @@ class AboutUs extends WP_Widget
                 'page_id' => (int)$instance['aboutus'],
     );
 
-    
+
     $posts = new WP_Query($queryArg);
     if($posts->have_posts()):
       while ($posts->have_posts()):
           $posts->the_post();
           ?>
           <section class="w-100 p-0 m-0 d-flex flex-row flex-nowrap">
-              <div class="col-6">
+              <div class="col-6 d-flex justify-content-center">
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
               </div>
               <div class="col-6 align-self-center">
@@ -39,7 +39,7 @@ class AboutUs extends WP_Widget
                   <div class="flg py-3 pr-2">
                        <?php the_title(); ?>
                   </div>
-                  <div class="text-justify pr-4">
+                  <div class="text-justify px-4">
                     <?php the_content(); ?>
                   </div>
 
