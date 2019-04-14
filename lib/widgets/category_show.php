@@ -24,7 +24,7 @@
 
 
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
-              echo '<section id="'.esc_attr($this->get_field_id("carTypeCategor")).'" class="d-flex flex-row justify-content-around">';
+              echo '<section id="'.esc_attr($this->get_field_id("carTypeCategor")).'" class="d-flex flex-row justify-content-around mt-3">';
               for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ):
                     $termid = (int)$instance['catid'.$index];
                     $mustshowpage = new WP_Query(array(
