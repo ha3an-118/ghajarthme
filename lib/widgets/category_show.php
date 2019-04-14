@@ -26,6 +26,7 @@
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
               echo '<section id="'.esc_attr($this->get_field_id("carTypeCategor")).'" class="d-flex flex-row justify-content-around">';
               for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ):
+                    $termid = (int)$instance['catid'.$index];
                     $mustshowpage = new WP_Query(array(
                                                   'page_id' => (int)$instance['pageid'.$index],
                                                 ));
@@ -36,7 +37,7 @@
                           $mustshowpage->the_post();?>
 
                           <div class="car-type-category-item  col-2 bg-1">
-                            <a href="<?php the_permalink(); ?>" >
+                            <a href="<?php echo  get_term_link($termid)?>" >
 
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="">
 
@@ -109,6 +110,27 @@
                      ?>
 
                   </select>
+
+                  <div class="widefat">
+                    <label for="<?php echo esc_attr($this->get_field_id('catid'.$index)); ?>"> دسته بندی مورد نظر را انتخاب کنید</label>
+
+                    <?php
+                    $terms = get_terms( array(
+                                        'taxonomy' => 'products_cat',
+                                        'hide_empty' => true,
+                ) );
+                    echo "<select  class='widefat' name='".$this->get_field_name('catid'.$index)."' id='".$this->get_field_id('catid'.$index)."'>";
+                    foreach($terms as $term):
+
+                      echo "<option value='".$term->term_id."'".((int)$instance['catid'.$index]==$term->term_id?'selected':'').">".$term->name."</option>";
+
+                    endforeach;
+                    echo "</select>";
+
+
+                     ?>
+
+                  </div>
 
                 </div>
 
