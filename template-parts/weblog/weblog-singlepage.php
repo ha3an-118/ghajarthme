@@ -7,7 +7,7 @@
     <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="">
 
   </div>
-  <div class="col-10 mx-auto align-self-center text-right">
+  <div class="col-12 mx-auto align-self-center text-right">
 
     <h3>
           <?php the_title(); ?>
