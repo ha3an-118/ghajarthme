@@ -1,5 +1,6 @@
 <?php
 require_once("lib/helper_functions.php");
+require_once("lib/admin/option.php");
 
 //register menu place
 add_action('init', 'ha_register_menu');
