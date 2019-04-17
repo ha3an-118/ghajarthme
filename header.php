@@ -106,7 +106,7 @@
             <form class="ha-top-search " action="#" method="post">
 
                 <input type="text" name="" value="" class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید">
-                <button type="submit" name="button" class="submitinput btn">
+                <button type="submit" name="button" class="submitinput btn bg-1 hover-bg-4">
                     <i class="fa fa-search "></i>
                 </button>
 
@@ -114,3 +114,4 @@
           </div>
 
       </nav>
+      

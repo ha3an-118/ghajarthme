@@ -74,6 +74,25 @@
           }//end of for
         ?>
       </div> <!-- end of  [role="sliderItemsHolder"] -->
+      <div class="" role="sliderNavigation">
+
+
+      <!-- IDEA: pager part  -->
+      <div class="" role="sliderPaginations" content>
+
+      </div>
+      <!-- IDEA: next/prevision part -->
+      <div class="slidernextprevrow">
+
+            <div class="p-2 bg-1" role="nextslide" >
+                  <
+            </div>
+
+            <div class="p-2 bg-1" role="prevslide">
+                    >
+            </div>
+
+      </div>
 
   </div> <!--  end of [role="slider"] -->
 </div> <!--  end fo .col9 -->

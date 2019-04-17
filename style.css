@@ -154,3 +154,13 @@ a:hover{
   background-image: linear-gradient(var(--color12),var(--color2) );
   background-repeat: no-repeat;
 }
+
+/* -------------------------------------------------------------- */
+.slidernextprevrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position:absolute;
+  top:45%;
+  width:100%;
+}
