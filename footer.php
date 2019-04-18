@@ -30,10 +30,10 @@
             </div>
 
             <div class="col-9 d-flex flex-column justify-content-center align-items-start">
-                <a  href="tellto:09119119191"class="pr-3 text-light">
+                <a  href="tellto:<?php echo get_option("haTellphoneone"); ?>"class="pr-3 text-light" target="_blank">
                     <?php echo get_option("haTellphoneone"); ?>
                 </a>
-                <a  href="tellto:09119119191"class="pr-3 text-light">
+                <a  href="tellto:<?php echo get_option("haTellphonetwo"); ?>"class="pr-3 text-light" target="_blank">
                   <?php echo get_option("haTellphonetwo"); ?>
                 </a>
 
@@ -78,14 +78,14 @@
 
           <div class="mx-2">
 
-              <a href="<?php echo get_option("hainstagram"); ?>">
+              <a href="<?php echo get_option("hainstagram"); ?>" target="_blank">
                   <i class="fab fa-4x fa-instagram text-1"></i>
               </a>
 
           </div>
           <div class="mx-2">
 
-              <a href="<?php echo get_option("hatelegram"); ?>">
+              <a href="<?php echo get_option("hatelegram"); ?>" target="_blank" >
                   <i class="fab fa-4x fa-telegram text-1"></i>
               </a>
 
@@ -102,7 +102,6 @@
         </div> -->
         <?php dynamic_sidebar("footer3"); ?>
 
-        [wpgmza id="1"]
     </div>
   </div>
 

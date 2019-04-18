@@ -39,7 +39,7 @@
 
             </div>
 
-             <div class="align-self-center text-1 d-flex flex-row dir-ltr"> -->
+             <div class="align-self-center text-1 d-flex flex-row dir-ltr"> 
               <i class="fa fa-2x fa-headset"></i>
               <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphoneone"); ?></a>
               <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphonetwo"); ?></a>

@@ -29,7 +29,7 @@ class AboutUs extends WP_Widget
           $posts->the_post();
           ?>
           <section class="w-100 p-0 m-0 d-flex flex-row flex-nowrap">
-              <div class="col-6 d-flex justify-content-center">
+              <div class="col-6 d-flex justify-content-center p-0 m-0">
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
               </div>
               <div class="col-6 align-self-center">
