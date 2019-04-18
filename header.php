@@ -39,13 +39,13 @@
 
             </div>
 
-            <!-- <div class="align-self-center text-1 d-flex flex-row dir-ltr"> -->
-              <!-- <i class="fa fa-2x fa-headset"></i>
-              <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11">9119111955</a>
-              <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11">9119111955</a> -->
+             <div class="align-self-center text-1 d-flex flex-row dir-ltr"> -->
+              <i class="fa fa-2x fa-headset"></i>
+              <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphoneone"); ?></a>
+              <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphonetwo"); ?></a>
 
               <?php
-
+              /*
               $arg_phone_top_menu = array(
                 'menu_class'        => "align-self-center text-1 d-flex flex-row dir-ltr ha-list-style-none",
                 'menu_id'           => "",
@@ -61,13 +61,13 @@
               );
 
               wp_nav_menu( $arg_phone_top_menu );
-
+              */
                ?>
 
 
 
 
-            <!-- </div> -->
+         </div>
       </header>
     <!--         start navigation  part             -->
       <nav class="container-fluid dg-nav d-flex flex-row justify-content-between bg-4">
@@ -114,4 +114,3 @@
           </div>
 
       </nav>
-      

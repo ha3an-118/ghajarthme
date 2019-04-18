@@ -151,7 +151,7 @@ a:hover{
 /* =====================================================================  */
 /* footer  */
 .dg-footer{
-  background-image: linear-gradient(var(--color12),var(--color2) );
+  background-image: linear-gradient(var(--color11) -100% ,var(--color2) );
   background-repeat: no-repeat;
 }
 

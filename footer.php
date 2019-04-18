@@ -17,32 +17,82 @@
 
     </div>
     <div class="col-4 text-right py-5" id="contactus">
-        <!-- <div class="d-flex flex-row flex-nowrap" id="footerphone">
-            <i class="fa fa-lg fa-phone text-1"></i>
-            <div class="">
-                <a  href="tellto:09119119191"class="pr-3 text-light">09119119191</a>
-                <a  href="tellto:09119119191"class="pr-3 text-light">09119119191</a>
+
+
+        <div class="d-flex flex-row flex-nowrap justify-content-start" id="footerphone">
+
+            <div class="col-2 d-flex justify-content-center">
+
+                <div class="align-self-center">
+                  <i class="fa fa-2x fa-phone text-1 "></i>
+                </div>
+
+            </div>
+
+            <div class="col-9 d-flex flex-column justify-content-center align-items-start">
+                <a  href="tellto:09119119191"class="pr-3 text-light">
+                    <?php echo get_option("haTellphoneone"); ?>
+                </a>
+                <a  href="tellto:09119119191"class="pr-3 text-light">
+                  <?php echo get_option("haTellphonetwo"); ?>
+                </a>
 
             </div>
 
         </div>
-        <div class="d-flex flex-row flex-nowrap" id="footerphone">
-            <i class="fa fa-lg fa-location-arrow text-1"></i>
-            <div class="">
 
-                <a  href="tellto:09119119191"class="pr-3 text-light">آدرس شماره یک </a>
 
+        <div class="d-flex flex-row flex-nowrap justify-content-start mt-2" id="footerphone">
+
+          <div class="col-2 d-flex justify-content-center ">
+
+              <div class="align-self-center">
+                <i class="fa fa-2x fa-map-marker text-1"></i>
+              </div>
+
+          </div>
+
+
+          <div class="col-9 d-flex flex-column justify-content-center">
+
+
+            <div class="align-self-center">
+              <span class="pr-3 text-light"> <?php echo get_option("haAdress"); ?></span>
             </div>
+
+
+
+          </div>
+
 
 
         </div>
         <div class="pt-3">
           <form class="" action="index.html" method="post">
-            <label for="submiteournews" class="h4"> عضویت در خبر نامه</label>
+            <label for="submiteournews" class="h4 text-light"> عضویت در خبر نامه</label>
             <input id="submiteournews" type="text" name="" value="" class=" w-100">
           </form>
-        </div> -->
-        <?php dynamic_sidebar("footer2"); ?>
+        </div>
+
+        <div class="d-flex flex-row flex-wrap justify-content-center mt-3">
+
+          <div class="mx-2">
+
+              <a href="<?php echo get_option("hainstagram"); ?>">
+                  <i class="fab fa-4x fa-instagram text-1"></i>
+              </a>
+
+          </div>
+          <div class="mx-2">
+
+              <a href="<?php echo get_option("hatelegram"); ?>">
+                  <i class="fab fa-4x fa-telegram text-1"></i>
+              </a>
+
+          </div>
+
+        </div>
+        <?php //dynamic_sidebar("footer2"); ?>
 
     </div>
     <div class="col-4">
@@ -52,7 +102,7 @@
         </div> -->
         <?php dynamic_sidebar("footer3"); ?>
 
-
+        [wpgmza id="1"]
     </div>
   </div>
 
