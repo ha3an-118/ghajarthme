@@ -27,7 +27,7 @@ class SliderWeblog extends WP_Widget
     $posts = new WP_Query($queryArg);
     ?>
 
-    <section class="contianer-fluid d-flex flex-column flex-nowrap mt-3 bg-10">
+    <section class="contianer-fluid d-flex flex-column flex-nowrap  bg-10">
       <div class="dg-segustion-header p-3 text-right ">
 
           <div class="f1r5 pr-4 ">
