@@ -3,7 +3,7 @@
 
   <div class="d-flex flex-row flex-nowrap">
 
-    <div class="col-4 text-right text-light py-5" id="aboutusfooter">
+    <div class="col-4 text-right text-light " id="aboutusfooter">
 
         <!-- <div class="h4">
             این یک تست برای درباره ما است
