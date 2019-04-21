@@ -103,7 +103,7 @@
 
 
           <div class="col-4">
-            <form class="ha-top-search " action="#" method="GET" role="search">
+            <form class="ha-top-search " action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" role="search">
 
                 <input type="search"  class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید" value="<?php echo get_search_query(); ?>" name="s">
                 <button type="submit" name="button" class="submitinput btn bg-1 hover-bg-4">
