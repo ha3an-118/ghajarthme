@@ -24,31 +24,9 @@
 
       ?>
     <!--         start baner part                   -->
-    <section class="contianer-fluid d-flex flex-row mt-2 dg-baner">
+    <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner">
 
-      <div class="col-3 d-flex justify-content-center">
-
-        <!-- <img class="img-fluid " src="pic/3.jpg" alt=""> -->
-        <?php // TODO: must get page from admin ui and show heare ?>
-        <?php
-        $baner = new WP_Query(array(
-                                      'page_id' => (int)$instance['baner'],
-                                    ));
-        if($baner->have_posts()):
-          while($baner->have_posts()):
-            $baner->the_post();
-            ?>
-            <img class="img-fluid " src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-            <?php
-          endwhile;
-        endif;
-        wp_reset_postdata();
-
-         ?>
-
-      </div>
-
-      <div class="col-9">
+      <div class="col-12 col-md-9">
 
       <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="2000"  navigation="true" >
           <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
@@ -93,9 +71,34 @@
             </div>
 
       </div>
+    </div> <!-- [role=sliderNavigation ] -->
 
   </div> <!--  end of [role="slider"] -->
 </div> <!--  end fo .col9 -->
+
+<div class="col-12 col-sm-10 mx-sm-auto col-md-3 d-flex justify-content-center">
+
+  <!-- <img class="img-fluid " src="pic/3.jpg" alt=""> -->
+  <?php // TODO: must get page from admin ui and show heare ?>
+  <?php
+  $baner = new WP_Query(array(
+                                'page_id' => (int)$instance['baner'],
+                              ));
+  if($baner->have_posts()):
+    while($baner->have_posts()):
+      $baner->the_post();
+      ?>
+      <img class="img-fluid " src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+      <?php
+    endwhile;
+  endif;
+  wp_reset_postdata();
+
+   ?>
+
+</div>
+
+
 </section> <!-- end of .dg-baner -->
     <?php
 
