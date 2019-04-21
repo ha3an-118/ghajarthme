@@ -17,12 +17,10 @@ get_header();
               while(have_posts()):
                   the_post();
 
-                
+
 
                   if($post->post_type == "post"):
                     get_template_part("template-parts/weblog/weblog","weblog4");
-                  elseif ($post->post_type == "page"):
-                    return;
                   elseif ($post->post_type == "product"):
                     get_template_part("template-parts/product/product","item");
                   endif;
