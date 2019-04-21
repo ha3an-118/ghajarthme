@@ -39,7 +39,7 @@
 
             </div>
 
-             <div class="align-self-center text-1 d-flex flex-row dir-ltr"> 
+             <div class="align-self-center text-1 d-flex flex-row dir-ltr">
               <i class="fa fa-2x fa-headset"></i>
               <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphoneone"); ?></a>
               <a href="trello:+98911901111"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphonetwo"); ?></a>
@@ -103,9 +103,9 @@
 
 
           <div class="col-4">
-            <form class="ha-top-search " action="#" method="post">
+            <form class="ha-top-search " action="#" method="GET" role="search">
 
-                <input type="text" name="" value="" class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید">
+                <input type="search"  class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید" value="<?php echo get_search_query(); ?>" name="s">
                 <button type="submit" name="button" class="submitinput btn bg-1 hover-bg-4">
                     <i class="fa fa-search "></i>
                 </button>
