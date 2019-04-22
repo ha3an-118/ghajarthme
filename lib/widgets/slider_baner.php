@@ -24,7 +24,7 @@
 
       ?>
     <!--         start baner part                   -->
-    <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner">
+    <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner dir-ltr">
 
       <div class="col-12 col-md-9">
 

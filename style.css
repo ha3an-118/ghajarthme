@@ -32,8 +32,19 @@ a:hover{
 
 /* header  */
 .dg-header{
-  height: 70px;
+  height: auto;
+  padding: 0px !important;
 }
+@media (min-width: 768px){
+  .dg-header{
+    height: 70px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+
+
 .dg-logo{
 
   height: 60px;
@@ -163,4 +174,51 @@ a:hover{
   position:absolute;
   top:45%;
   width:100%;
+}
+
+/* ------------------------------------------------------------------- */
+/* solve in responsive part */
+.ha-top-bg{
+    background-color: var(--color1);
+    border-top: 1px solid var(--color4);
+    border-bottom: 1px solid var(--color4);
+
+    padding:0 1rem .8rem 0;
+
+}
+.dg-header{
+  height: auto;
+}
+
+.dgnavphone{
+
+      background-image: linear-gradient(to bottom, #3f3f3f , #3e3e3e);
+      z-index: 100000;
+      overflow: hidden;
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  .ha-top-bg{
+      background-color: var(--color3);
+      border-top: none;
+      border-bottom: none;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

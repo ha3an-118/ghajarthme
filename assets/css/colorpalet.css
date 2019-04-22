@@ -20,6 +20,10 @@
      --color19:#;
      --color20:#;
     }
+
+.bg-trnsparent{
+  background-color: inherit;
+}
 /*color1*/
 .bg-1{
     background-color:var(--color1) !important;
