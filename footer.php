@@ -1,9 +1,9 @@
 <!--          footer part                        -->
 <footer class="continer-fluid dg-footer">
 
-  <div class="d-flex flex-row flex-nowrap">
+  <div class="d-flex flex-column flex-md-row flex-nowrap">
 
-    <div class="col-4 text-right text-light " id="aboutusfooter">
+    <div class="col-12 col-md-4 text-right text-light " id="aboutusfooter">
 
         <!-- <div class="h4">
             این یک تست برای درباره ما است
@@ -16,7 +16,7 @@
 
 
     </div>
-    <div class="col-4 text-right py-5" id="contactus">
+    <div class="col-12 col-md-4 text-right py-5" id="contactus">
 
 
         <div class="d-flex flex-row flex-nowrap justify-content-start" id="footerphone">
@@ -95,7 +95,7 @@
         <?php //dynamic_sidebar("footer2"); ?>
 
     </div>
-    <div class="col-4">
+    <div class="col-12 col-md-4">
 
         <!-- <div class="">
           google.map

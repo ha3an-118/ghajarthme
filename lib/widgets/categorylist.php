@@ -17,15 +17,15 @@ class CatList extends WP_Widget
   public function widget($args, $instance)
   {
     ?>
-    <section class="contianer-fluid d-flex flex-row flex-nowrap mt-3">
+    <section class="contianer-fluid d-flex flex-column flex-md-row flex-nowrap mt-3">
 
-      <div class="col-9 d-flex justify-content-center">
+      <div class="col-12 col-md-9 d-flex justify-content-center">
 
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/pic/car.png" alt="" class="img-fluid">
 
       </div>
 
-      <div class="col-3">
+      <div class="col-12 col-md-3">
 
         <ul class="list-group dg-list-group text-right">
           <?php

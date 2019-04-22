@@ -56,7 +56,7 @@
 
 
       <!-- IDEA: pager part  -->
-      <div class="" role="sliderPaginations" content>
+      <div class="d-none d-md-flex justify-content-center" role="sliderPaginations" content>
 
       </div>
       <!-- IDEA: next/prevision part -->

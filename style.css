@@ -93,7 +93,7 @@ a:hover{
 /* -------------------------- baner slider -------------------------------- */
 
 .dg-baner{
-  max-height: 70% !important;
+  max-height: auto !important;
   min-height: 70% !important;
 }
 .dg-baner img{
@@ -101,10 +101,23 @@ a:hover{
   max-height: 100%;
 }
 .dg-baner-txt {
-  position: absolute;
-  bottom:20%;
+  position: relative;
+  bottom:0%;
   left: 0%;
-  max-width: 50%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .dg-baner-txt {
+    position: absolute;
+    bottom:20%;
+    left: 0%;
+    max-width: 50%;
+  }
+  .dg-baner{
+    max-height: 70% !important;
+    min-height: 70% !important;
+  }
+
 }
 /* ======================================================================== */
 /* category part  */
@@ -112,7 +125,7 @@ a:hover{
   padding: 1rem;
   border: none;
   border-radius: 50%;
-  max-width: 15% !important;
+  /* max-width: 15% !important; */
   display: flex;
 
 }

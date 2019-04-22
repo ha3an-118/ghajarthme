@@ -28,11 +28,11 @@ class AboutUs extends WP_Widget
       while ($posts->have_posts()):
           $posts->the_post();
           ?>
-          <section class="w-100 p-0 m-0 d-flex flex-row flex-nowrap">
-              <div class="col-6 d-flex justify-content-center p-0 m-0">
+          <section class="w-100 p-0 m-0 d-flex flex-column flex-md-row flex-nowrap">
+              <div class="col-12 col-md-6 d-flex justify-content-center p-0 m-0 d-none d-md-flex">
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
               </div>
-              <div class="col-6 align-self-center">
+              <div class="col-12 col-md-6 align-self-center">
 
                 <div class="d-flex flex-column flex-nowrap text-right justify-content-center">
 

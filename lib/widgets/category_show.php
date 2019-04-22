@@ -24,7 +24,7 @@
 
 
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
-              echo '<section id="'.esc_attr($this->get_field_id("carTypeCategor")).'" class="d-flex flex-row justify-content-around ">';
+              echo '<section id="'.esc_attr($this->get_field_id("carTypeCategor")).'" class="d-flex flex-row flex-wrap justify-content-around my-2">';
               for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ):
                     $termid = (int)$instance['catid'.$index];
                     $mustshowpage = new WP_Query(array(
@@ -36,7 +36,7 @@
 
                           $mustshowpage->the_post();?>
 
-                          <div class="car-type-category-item  col-2 bg-1">
+                          <div class="car-type-category-item  col-5 col-md-2 bg-1 my-1  ">
                             <a href="<?php echo  get_term_link($termid)?>" >
 
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="">
