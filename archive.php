@@ -8,11 +8,11 @@ get_header();
 <!--  start  product page  -->
       <section class="container-fluid d-flex flex-row justify-content-between bg-3 mt-3">
 
-        <div class="col-3">
+        <div class="d-none d-md-flex col-md-3">
 
 
         </div>
-        <div class="col-9 d-flex flex-wrap juastify-content-start">
+        <div class="col-12 col-md-9 d-flex flex-wrap juastify-content-start">
 
 <?php
 
