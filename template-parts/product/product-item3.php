@@ -1,5 +1,5 @@
 <!-- start item   -->
-        <div class="col-12 col-sm-10 col-md-5 col-lg-4 mx-auto my-2"  >
+        <div class="col-12 col-sm-10 col-md-4 col-lg-3 mx-auto my-2"  >
           <div class="dg-segustion-item   d-flex flex-column flex-nowrap hover-bg-3 p-0 pb-3 align-items-center ">
 
               <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="">
