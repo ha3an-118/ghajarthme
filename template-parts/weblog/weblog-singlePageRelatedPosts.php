@@ -71,9 +71,9 @@
 
         </div>
     </div>
-
+    <div class="col-12 d-flex flex-wrap juastify-content-start">
     <?php
-    echo '<div class="col-12 d-flex flex-wrap juastify-content-start">';
+  
     if($relatedPosts->have_posts()):
       while($relatedPosts->have_posts()):
           $relatedPosts->the_post();
@@ -81,7 +81,10 @@
       endwhile;
 
     endif;
-    echo "</div> </section>";
+
     wp_reset_postdata();
 
 ?>
+  </div>
+
+ </section>
