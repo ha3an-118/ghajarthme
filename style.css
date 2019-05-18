@@ -242,3 +242,38 @@ a:hover{
 @media (min-width: 1200px) {
 
 }
+
+
+/* -------------------------------------------------------------------- */
+
+.ha-spin {
+  -webkit-animation: ha-spin 2s infinite linear;
+          animation: ha-spin 2s infinite linear; }
+
+.ha-pulse {
+  -webkit-animation: ha-spin 1s infinite steps(8);
+          animation: ha-spin 1s infinite steps(8); }
+
+@-webkit-keyframes ha-spin {
+  0% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); }
+  50%{
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+      }
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); } }
+
+@keyframes ha-spin {
+  0% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); }
+  50%{
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+      }
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); } }

@@ -30,12 +30,16 @@
     <!-- IDEA: header part  -->
       <header class="container-fluid dg-header d-flex flex-column flex-md-row justify-content-between dir-ltr">
         <div class="align-self-md-center text-1 d-flex flex-row dir-ltr py-1 py-md-0 justify-content-around">
-           <i class="fa fa-2x fa-headset"></i>
+
+           <i class="fas fa-phone-volume fa-2x align-self-center ha-spin "></i>
+
            <a href="tell:<?php echo get_option("haTellphoneone"); ?>"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphoneone"); ?></a>
+
+           <i class="fas fa-mobile-alt fa-2x pl-2 align-self-center ha-spin"></i>
            <a href="tell:<?php echo get_option("haTellphonetwo"); ?>"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphonetwo"); ?></a>
            <div class="align-self-center d-md-none">
                       <button expandwinid="topnavphone" class="btn" >
-                        <i class="fa fa-align-justify fa-2x"></i>
+                        <i class="fas fa-search fa-2x fa-border text-11"></i>
                       </button>
             </div>
 

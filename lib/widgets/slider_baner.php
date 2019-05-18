@@ -63,11 +63,15 @@
       <div class="slidernextprevrow">
 
             <div class="p-2 bg-1" role="nextslide" >
-                  <
+
+                <i class="fa fa-chevron-left fa-lg"></i>
+
             </div>
 
             <div class="p-2 bg-1" role="prevslide">
-                    >
+
+                <i class="fa fa-chevron-right fa-lg"></i>
+
             </div>
 
       </div>
