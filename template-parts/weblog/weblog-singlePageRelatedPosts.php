@@ -35,7 +35,7 @@
         ?>
 
           <a href="<?php echo get_term_link($term); ?>"
-             class="p-2 mr-2 hover-text-1 text-8">
+             class="p-2 mr-2 hover-text-1 text-8" >
             <?php echo $term->name; ?>
           </a>
         <?php
@@ -73,7 +73,7 @@
     </div>
     <div class="col-12 d-flex flex-wrap juastify-content-start">
     <?php
-  
+
     if($relatedPosts->have_posts()):
       while($relatedPosts->have_posts()):
           $relatedPosts->the_post();

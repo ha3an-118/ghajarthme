@@ -6,7 +6,7 @@
           <h3><?php the_title(); ?></h3>
 
 
-          <div class="">
+          <div class="ha-slider-text">
               <?php the_excerpt(); ?>
           </div>
         </div>

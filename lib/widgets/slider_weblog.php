@@ -38,16 +38,16 @@ class SliderWeblog extends WP_Widget
           </div>
       </div>
 
-      <div class="container-fluid d-flex flex-row flex-nowrap justify-content-between"
+      <div class="container-fluid d-flex flex-row flex-nowrap justify-content-between overflow-hidden"
           id="<?php echo esc_attr($this->get_field_id("sugesttion")) ?>" role="slider" type="protofile" arrang="horizontal"      >
           <div class=" d-flex flex-column justify-content-center" >
             <bottom class="bg-light hover-bg-12 text-12 hover-text-3 py-3 px-2  rounded " role="nextprotofile">
-              <
+              <i class="fa fa-chevron-right fa-lg"></i>
             </bottom>
 
           </div>
 
-          <div class="col-11" >
+          <div class="col-10" >
 
             <div class="dg-segustion-group py-3 d-flex flex-row flex-nowrap " role="sliderItemsHolder">
               <?php
@@ -68,9 +68,9 @@ class SliderWeblog extends WP_Widget
 
         </div> <!-- end [role = slider] -->
         <div class=" d-flex flex-column justify-content-center" >
-          <div class="bg-light hover-bg-12 text-12 hover-text-3 py-3 px-2  rounded " role="previousprotofile">
-            >
-          </div>
+          <bottom class="bg-light hover-bg-12 text-12 hover-text-3 py-3 px-2  rounded " role="previousprotofile">
+            <i class="fa fa-chevron-left fa-lg"></i>
+          </bottom>
 
         </div>
       </div>
