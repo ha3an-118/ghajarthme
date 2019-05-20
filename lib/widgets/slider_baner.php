@@ -80,7 +80,8 @@
   </div> <!--  end of [role="slider"] -->
 </div> <!--  end fo .col9 -->
 
-<div class="col-12 col-sm-10 mx-sm-auto col-md-3 d-flex justify-content-center">
+<div class="col-12 col-sm-10 mx-sm-auto col-md-3 d-md-flex justify-content-center d-none ">
+
 
   <!-- <img class="img-fluid " src="pic/3.jpg" alt=""> -->
   <?php // TODO: must get page from admin ui and show heare ?>
@@ -92,17 +93,66 @@
     while($baner->have_posts()):
       $baner->the_post();
       ?>
-      <img class="img-fluid " src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-      <?php
-    endwhile;
-  endif;
-  wp_reset_postdata();
+      <a href="<?php the_permalink(); ?>" style="height:100%;">
 
-   ?>
+        <img class="img-fluid " src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+
+      </a>
+
+
+</div>
+<div id="habannerpupup" class="ha-baner-pupup"
+  beforewidth="0" beforeheight="0" beforepositiontop="0" beforepositionleft="0"
+  afterwidth="100%" afterheight="100%" afterpositiontop="0" afterpositionleft="0" >
+
+    <button expandwinid="habannerpupup" class="btn bg-trnsparent" >
+      <i class="fa fa-times fa-2x text-1"></i>
+    </button>
+  <div class="col-9 mx-auto">
+    <a href="<?php the_permalink(); ?>" style="height:100%;">
+
+
+      <img class="img-fluid " src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+
+    </a>
+
+  </div>
+
+
 
 </div>
 
 
+
+
+  <div class="fixed-bottom  d-md-none alert alert-warning alert-dismissible fade show" role="alert">
+
+    <button expandwinid="habannerpupup" class="btn bg-trnsparent" >
+        <strong class="text-danger">یک پیشنهاد ویژه دارید </strong> برای نمایش کلید کنید.
+    </button>
+
+
+
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<?php
+      endwhile;
+  endif;
+  wp_reset_postdata();
+
+?>
+<script type="text/javascript">
+      $('[data-dismiss=alert]').click(function(){
+
+        $(this).parents('[role=alert]').hide();
+
+      });
+
+
+</script>
 </section> <!-- end of .dg-baner -->
     <?php
 

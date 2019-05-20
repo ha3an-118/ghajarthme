@@ -99,6 +99,7 @@ a:hover{
 .dg-baner img{
   width: 100% !important;
   max-height: 100%;
+  min-height: 100%;
 }
 .dg-baner-txt {
   position: relative;
@@ -124,6 +125,10 @@ a:hover{
     max-height: 70% !important;
     min-height: 70% !important;
   }
+
+}
+
+.ha-baner-pupup >div{
 
 }
 /* ======================================================================== */
@@ -210,7 +215,7 @@ a:hover{
   height: auto;
 }
 
-.dgnavphone{
+.dgnavphone , .ha-baner-pupup{
 
       background-image: linear-gradient(to bottom, #3f3f3f , #3e3e3e);
       z-index: 100000;
