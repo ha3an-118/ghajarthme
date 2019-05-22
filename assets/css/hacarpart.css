@@ -1,0 +1,39 @@
+.ha-icon {
+
+
+}
+
+.ha-piston::before{
+    content: url("../pic/icon/piston.svg");
+}
+.ha-battery::before{
+    content: url("../pic/icon/battery.svg");
+}
+.ha-car-lights::before{
+    content: url("../pic/icon/car-lights.svg");
+}
+.ha-car-lights-1::before{
+    content: url("../pic/icon/car-lights-1.svg");
+}
+.ha-dashboard::before{
+    content: url("../pic/icon/dashboard.svg");
+}
+.ha-engine::before{
+    content: url("../pic/icon/engine.svg");
+}
+.ha-gas-station::before{
+    content: url("../pic/icon/gas-station.svg");
+}
+.ha-info::before{
+    content: url("../pic/icon/info.svg");
+}
+
+.ha-steering-wheel::before{
+    content: url("../pic/icon/steering-wheel.svg");
+}
+.ha-temperature::before{
+    content: url("../pic/icon/temperature.svg");
+}
+.ha-tire::before{
+    content: url("../pic/icon/tire.svg");
+}

@@ -7,7 +7,7 @@ html , body{
 body{
   /* background-image: linear-gradient(to bottom,var(--color3),var(--color10));
   background-repeat: no-repeat; */
-  font-family: nasim !important;
+  font-family:nasim !important;
 }
 /* -------------------------------------------------------------------------*/
 
@@ -21,7 +21,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  text-decoration: none;
+  text-decoration: none !important ;
 }
 
 .ha-list-style-none{
@@ -282,3 +282,18 @@ a:hover{
   100% {
     -webkit-transform: rotate(-30deg);
             transform: rotate(-30deg); } }
+
+/* ----------------------------------------------------------- */
+.ha-part-cat-item{
+  border-radius: .25rem;
+  border-bottom:4px solid var(--color11);
+  transition: all .5s;
+
+}
+.ha-part-cat-item:hover{
+
+  border:2px solid var(--color8);
+  border-bottom:2px solid var(--color8);
+
+  transition: all .5s;
+}

@@ -17,6 +17,30 @@ function ha_print_admin_form(){
 
         <tr>
           <th>
+              <label for="hanamesilabone">
+                    نام وب سایت
+               </label>
+          </th>
+          <td>
+              <input id="hanamesilabone" type="text" name="hanamesilabone" class="regular-text "
+                      value="<?php echo get_option("haNameSone"); ?>" >
+              <p class="description">
+                قسمت اول نام
+              </p>
+          </td>
+          <td>
+              <input id="hanamesilabtwo" type="text" name="hanamesilabtwo" class="regular-text "
+                      value="<?php echo get_option("haNameStwo"); ?>" >
+              <p class="description">
+                قسمت دوم نام
+              </p>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <th>
               <label for="hatellone">
                 شماره تلفن اول
                </label>
@@ -113,12 +137,17 @@ function ha_set_default_option(){
   add_option("haAdress","-");
   add_option("hainstagram","http://example.com");
   add_option("hatelegram","http://example.com");
+  add_option("haNameSone","name");
+  add_option("haNameStwo","name");
+
 
 
 }
 
 function ha_update_option(){
 
+  update_option("haNameSone",$_POST['hanamesilabone']);
+  update_option("haNameStwo",$_POST['hanamesilabtwo']);
   update_option("haTellphoneone",$_POST['hatellone']);
   update_option("haTellphonetwo",$_POST['hatelltwo']);
   update_option("haAdress",$_POST['haadress']);

@@ -6,6 +6,14 @@
         url('../fonts/nasim/nasim.otf') format('opentype'),
         url('../fonts/nasim/nasim.svg#Nasim') format('svg');
 }
+@font-face{
+    font-family:"webyekan";
+    src:url('../fonts/webyekan/webyekan.eot');
+    src:
+        url('../fonts/webyekan/webyekan.woff') format("woff"),
+        url('../fonts/webyekan/webyekan.otf') format('opentype'),
+        url('../fonts/webyekan/webyekan.svg#webyekan') format('svg');
+}
 /* font size style */
 .fsm{
   font-size: .8rem;

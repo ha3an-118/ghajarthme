@@ -22,6 +22,7 @@
 
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/expand.js"></script>
 
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/hacarpart.css">
 
 
     <title></title>
@@ -72,8 +73,8 @@
                   <?php the_custom_logo(); ?>
               </div>
               <div class="flg text-2 align-self-center pr-3 ">
-                <span>گروه پخش لوازم یدکی </span>
-                <span class="text-8">پرشین</span>
+                <span><?php echo get_option("haNameSone"); ?> </span>
+                <span class="text-8"><?php echo get_option("haNameStwo") ?></span>
               </div>
 
             </div>
