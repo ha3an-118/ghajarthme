@@ -297,3 +297,39 @@ a:hover{
 
   transition: all .5s;
 }
+/* ------------------------------------------------------------ */
+.ha-menu .sub-menu{
+  position: absolute;
+  top: 112px;
+
+  background-color: var(--color4);
+  list-style: none;
+  text-align: right;
+  padding: 1rem;
+  visibility: hidden;
+  transition-delay: .5s;
+  z-index: 9999;
+
+  border: 2px solid var(--color1);
+  border-top: 1px solid var(--color3);
+  border-bottom-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+
+
+
+}
+
+.ha-menu .sub-menu li:hover{
+  border-bottom: 1px solid var(--color3);
+}
+.ha-menu li:hover .sub-menu{
+  visibility: visible;
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+.ha-menu-phone .sub-menu{
+
+  list-style: none;
+  padding-right: 1rem;
+}

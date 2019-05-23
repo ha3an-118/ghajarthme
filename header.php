@@ -125,7 +125,7 @@
               <?php
 
               $arg_main_top_menu = array(
-                'menu_class'        => "d-flex flex-column  pr-4 fmd ha-list-style-none",
+                'menu_class'        => "ha-menu-phone d-flex flex-column  pr-4 fmd ha-list-style-none",
                 'menu_id'           => "",
                 'container'         => "div",
                 'container_class'   => "d-flex",
@@ -148,18 +148,11 @@
     <!--         start navigation  part             -->
       <nav class="container-fluid dg-nav d-none d-md-flex flex-row justify-content-between bg-4 ">
 
-          <!-- <div class="d-flex flex-row  pr-4 fmd ">
-              <a href="#" class="text-2 hover-text-11 mr-2 "> صفحه اصلی</a>
-              <a href="#" class="text-2 hover-text-11 mr-2 "> صفحه اصلی</a>
-              <a href="#" class="text-2 hover-text-11 mr-2 "> صفحه اصلی</a>
-              <a href="#" class="text-2 hover-text-11 mr-2 "> صفحه اصلی</a>
-              <a href="#" class="text-2 hover-text-11 mr-2 "> صفحه اصلی</a>
 
-          </div> -->
           <?php
 
           $arg_main_top_menu = array(
-            'menu_class'        => "d-flex flex-row  pr-4 fmd ha-list-style-none",
+            'menu_class'        => "ha-menu d-flex flex-row  pr-4 fmd ha-list-style-none",
             'menu_id'           => "",
             'container'         => "div",
             'container_class'   => "d-flex",
@@ -191,5 +184,4 @@
 
       </nav>
       <div class="">
-
       </div>
