@@ -28,7 +28,7 @@
 
       <div class="col-12 col-md-9">
 
-      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="2000"  navigation="true" >
+      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="3000"  navigation="true" >
           <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
             <?php
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];

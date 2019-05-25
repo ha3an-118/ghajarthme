@@ -40,4 +40,6 @@ function ha_print_category_list($name,$widgetName,$taxonomy,$instance){
 
 
 
+
+
  ?>

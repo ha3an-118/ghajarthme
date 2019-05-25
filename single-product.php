@@ -4,13 +4,15 @@
 */
 get_header();
 
-
+echo "<section >";
 if(have_posts()):
 
   while(have_posts()):
     the_post();
 
     get_template_part("template-parts/product/product","singlepage");
+    get_template_part("template-parts/getterm");
+
 
     $postID = $post->ID;
 
@@ -22,7 +24,7 @@ else :
   echo "پست مورد نظر یافت نشد";
 endif;
 
-
+echo "</section>";
 
 $terms = wp_get_post_terms($postID,"products_cat");
 

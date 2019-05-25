@@ -24,7 +24,10 @@ if(have_posts()):
 
     get_template_part("template-parts/weblog/weblog","singlepage");
 
+
+
     get_template_part("template-parts/weblog/weblog","singlePageRelatedPosts");
+
 
     $postID = $post->ID;
 

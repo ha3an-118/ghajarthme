@@ -26,9 +26,12 @@ $custom_logo_arg = array(
 add_theme_support( 'custom-logo' );
 
 add_theme_support( 'post-thumbnails' );
+add_theme_support('custom-fields');
 
 //add post type support
 add_post_type_support( 'page', 'excerpt' );
+add_post_type_support( 'page', 'custom-fields');
+
 
 add_action( 'widgets_init', 'ha_sidebar_init' );
 

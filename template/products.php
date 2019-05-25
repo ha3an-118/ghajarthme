@@ -31,7 +31,7 @@ if($products->have_posts()):
           $products->the_post();
 
           get_template_part("template-parts/product/product","item");
-
+        
   endwhile;
   wp_reset_postdata();
 else:
