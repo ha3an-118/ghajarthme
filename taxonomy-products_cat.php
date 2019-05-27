@@ -10,6 +10,12 @@ get_header();
 
         <div class="col-3">
 
+          <?php
+          dynamic_sidebar("portfoliospage");
+           ?>
+
+
+
 
         </div>
         <div class="col-9 d-flex flex-wrap juastify-content-start">

@@ -62,8 +62,18 @@ function ha_sidebar_init() {
         'description' => __('نمایش در صفحه اصلی سایت '),
                 ) );
 
+  register_sidebar( array(
+                      'name' => __( 'portfolios page' ),
+                      'id' => 'portfoliospage',
+                      'description' => __('جهت نمایش در برگه محصولات '),
+                              ) );
+
 
 }
+
+
+
+
 
 //register widget
 
@@ -75,7 +85,8 @@ ha_add_widget("slider_weblog");
 ha_add_widget("aboutus");
 ha_add_widget("footer_aboutus");
 ha_add_widget("footer_contactus");
-
+ha_add_widget("sidebarCat");
+ha_add_widget("showParent");
 
 
 

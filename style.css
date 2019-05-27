@@ -333,3 +333,25 @@ a:hover{
   list-style: none;
   padding-right: 1rem;
 }
+/* ------------------------------------------------------- */
+.ha-parent-cat{
+  list-style: none;
+
+
+}
+.ha-parent-cat hr{
+  background-color: var(--color4);
+  width: 90%;
+  margin:0 auto;
+}
+.ha-parent-cat li{
+  padding: .5rem;
+}
+.ha-parent-cat li::before{
+  content: "- ";
+  color:var(--color8);
+  font-weight: 900;
+}
+.ha-parent-cat a{
+  color:var(--color2);
+}
