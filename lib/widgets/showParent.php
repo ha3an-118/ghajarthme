@@ -49,6 +49,7 @@ class ShowParent extends WP_Widget
     $parent_link = array();
 
     foreach($all_term_unique as $terms):
+
       foreach($terms as $term):
           $temp_parentlink = get_term_parents_list($term->term_id,$term->taxonomy,array(
              'separator'=> "-**-",

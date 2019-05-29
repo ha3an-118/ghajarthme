@@ -8,6 +8,7 @@ body{
   /* background-image: linear-gradient(to bottom,var(--color3),var(--color10));
   background-repeat: no-repeat; */
   font-family:nasim !important;
+  overflow-x: hidden;
 }
 /* -------------------------------------------------------------------------*/
 
@@ -354,4 +355,100 @@ a:hover{
 }
 .ha-parent-cat a{
   color:var(--color2);
+}
+/* ------------------------------------------------------ */
+.ha-asside{
+  width: 0;
+  max-width: 0;
+  min-width: 0;
+  overflow: hidden;
+  transition: all .5s ;
+
+}
+.ha-asside-open{
+  width: 80% !important;
+  max-width: 80% !important;
+  min-width: 80% !important;
+  transition: all 1s ;
+}
+.ha-container{
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+
+}
+.ha-asside-toggle{
+
+  position: fixed;
+  top: 90%;
+  right: 0;
+  z-index: 999999;
+}
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  .ha-asside{
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+    overflow: hidden;
+
+  }
+  .ha-asside-toggle{
+    display: none;
+  }
+  .ha-asside-open{
+    width: 0% !important;
+    max-width: 0% !important;
+    min-width: 0% !important;
+    transition: all .5s ;
+  }
+  .ha-container{
+    width: 80%;
+    max-width: 80%;
+    min-width: 80%;
+
+  }
+  .ha-container-open{
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+
+  }
+
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+  .ha-asside{
+    width: 18%;
+    max-width: 18%;
+    min-width: 18%;
+
+  }
+  .ha-container{
+    width: 82%;
+    max-width: 82%;
+    min-width: 82%;
+
+  }
+}
+.ha-btn{
+  background: transparent;
+  border:none;
+}
+.ha-asside-header{
+  background-color: var(--color3);
+  border:1px solid var(--color1);
+  border-radius: .3rem;
 }

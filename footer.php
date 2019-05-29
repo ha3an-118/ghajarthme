@@ -107,8 +107,15 @@
 
 </footer>
 
+<script type="text/javascript">
 
+  function haToggleAsside(){
+      $(".ha-asside").toggleClass("ha-asside-open");
+      $(".ha-container").toggleClass("ha-container-open");
+      $(".ha-asside-toggle").toggle();
+  }
 
+</script>
 
 
 
