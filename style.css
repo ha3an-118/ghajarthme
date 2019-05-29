@@ -452,3 +452,40 @@ a:hover{
   border:1px solid var(--color1);
   border-radius: .3rem;
 }
+/* --------------------------------------------------------------------- */
+.ha-side-list-hiracial{
+    list-style: none;
+    padding: 0;
+}
+.ha-side-list-hiracial>li{
+  direction: rtl !important;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+.ha-side-list-hiracial>li::before{
+  content: "";
+
+}
+.ha-side-list-hiracial>li>a{
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+
+}
+.ha-side-list-hiracial>li:hover{
+  border-left:5px solid red;
+}
+.ha-side-list-hiracial>ul{
+  position: relative;
+  padding-right: 1.5rem !important;
+
+}
+.ha-side-list-hiracial>ul::before{
+  content: "";
+  position: absolute;
+
+  top:0;
+  right: 0;
+  border: .1rem solid var(--color12);
+  height: 100%;
+}

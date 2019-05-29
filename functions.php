@@ -101,7 +101,7 @@ ha_add_widget("footer_aboutus");
 ha_add_widget("footer_contactus");
 ha_add_widget("sidebarCat");
 ha_add_widget("showParent");
-
+ha_add_widget("sidebarCatChalid");
 
 
 
