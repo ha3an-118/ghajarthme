@@ -30,7 +30,7 @@ $products = new WP_Query($arg);
           </div>
 
 
-          <?php dynamic_sidebar("portfoliospage "); ?>
+          <?php dynamic_sidebar("productspage"); ?>
 
 
 

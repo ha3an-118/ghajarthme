@@ -22,7 +22,7 @@ get_header();
           </div>
 
           <?php
-          dynamic_sidebar("portfoliospage");
+          dynamic_sidebar("producttaxpage");
            ?>
 
 

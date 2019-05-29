@@ -60,14 +60,28 @@ function ha_sidebar_init() {
         'name' => __( 'home page' ),
         'id' => 'homepage',
         'description' => __('نمایش در صفحه اصلی سایت '),
-                ) );
+        ) );
 
   register_sidebar( array(
-                      'name' => __( 'portfolios page' ),
-                      'id' => 'portfoliospage',
-                      'description' => __('جهت نمایش در برگه محصولات '),
+        'name' => __( 'products page' ),
+        'id' => 'productspage',
+        'description' => __('جهت نمایش در برگه محصولات '),
+        ) );
+   register_sidebar( array(
+        'name' => __( 'product tax page' ),
+        'id' => 'producttaxpage',
+        'description' => __('جهت نمایش در برگه محصولات برچسب ها '),
+        ) );
+    register_sidebar( array(
+        'name' => __( 'weblog page' ),
+        'id' => 'weblogpage',
+        'description' => __('جهت نمایش در برگه محصولات '),
+                                    ) );
+register_sidebar( array(
+        'name' => __( 'weblog single page' ),
+        'id' => 'weblogsinglepage',
+        'description' => __('جهت نمایش در برگه محصولات '),
                               ) );
-
 
 }
 

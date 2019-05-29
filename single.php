@@ -18,6 +18,7 @@ get_header();
       </button>
 
     </div>
+    <?php dynamic_sidebar("weblogsinglepage"); ?>
 
 
   </div>

@@ -27,7 +27,7 @@ $products = new WP_Query($arg);
             </button>
 
           </div>
-
+          <?php dynamic_sidebar("weblogpage"); ?>
 
         </div>
         <div class="ha-container d-flex flex-wrap juastify-content-start">
