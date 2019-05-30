@@ -12,6 +12,8 @@ function ha_register_menu(){
   );
   register_nav_menus($arg);
 }
+// post per page
+
 
 // add thme suport coustem logo to theme
 $custom_logo_arg = array(

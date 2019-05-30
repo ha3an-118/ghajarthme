@@ -29,12 +29,13 @@ get_header();
 
 
         </div>
-        <div class="ha-container d-flex flex-wrap juastify-content-start">
+        <div class="ha-container d-flex flex-column">
 
 <?php
 
 if(have_posts()):
 
+  echo "<div class=' d-flex  flex-wrap  juastify-content-start '>";
   while(have_posts()):
 
           the_post();
@@ -42,7 +43,9 @@ if(have_posts()):
           get_template_part("template-parts/product/product","item");
 
   endwhile;
+  echo "</div>";
   wp_reset_postdata();
+  get_template_part("template-parts/pagination","regular");
 else:
   echo "محصولی یافت نشد";
 

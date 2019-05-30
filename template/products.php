@@ -13,11 +13,12 @@ else { $paged = 1; }
 
 $arg = array(
   'post_type' => 'product',
-  'posts_per_page'=>20,
+  
   'paged'=> $paged,
 );
-global $wp_query;
-$products = new WP_Query($arg);
+global $query;
+
+$query = new WP_Query($arg);
 
 
 ?>
@@ -49,41 +50,20 @@ $products = new WP_Query($arg);
 
 <?php
 
-if($products->have_posts()):
+if($query->have_posts()):
     echo "<div class='d-flex flex-wrap juastify-content-start'>";
-  while($products->have_posts()):
+  while($query->have_posts()):
 
-          $products->the_post();
+          $query->the_post();
 
           get_template_part("template-parts/product/product","item");
 
   endwhile;
   wp_reset_postdata();
-    echo "</div><div class='d-flex flex-row justify-content-center mt-2'>";
-        $numberofpage =(int)$products->max_num_pages;
-        if($numberofpage > 1):
-            echo '<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link text-12 hover-text-8" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>' ;
-            for($index=1 ; $index<=$numberofpage; $index++):
-
-              echo '<li class="page-item"><a class="page-link text-12 hover-text-8" href="'.get_the_permalink().'&paged='.$index.'">'.$index.'</a></li>';
-
-
-            endfor;
-            echo '<li class="page-item">
-      <a class="page-link text-12 hover-text-8" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>';
-      endif;
     echo "</div>";
+
+    get_template_part("template-parts/pagination");
+
 
 
 

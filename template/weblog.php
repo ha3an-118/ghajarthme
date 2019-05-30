@@ -5,11 +5,17 @@
 */
 get_header();
 
+if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+else { $paged = 1; }
+
 $arg = array(
   'post_type' => 'post',
+  
+  'paged'=> $paged,
 );
-
-$products = new WP_Query($arg);
+global $query;
+$query = new WP_Query($arg);
 
 ?>
 
@@ -30,20 +36,24 @@ $products = new WP_Query($arg);
           <?php dynamic_sidebar("weblogpage"); ?>
 
         </div>
-        <div class="ha-container d-flex flex-wrap juastify-content-start">
+        <div class="ha-container d-flex flex-column">
 
 <?php
 
-if($products->have_posts()):
+if($query->have_posts()):
+  echo "<div class='d-flex flex-wrap juastify-content-start'>";
+  while($query->have_posts()):
 
-  while($products->have_posts()):
-
-          $products->the_post();
+          $query->the_post();
 
           get_template_part("template-parts/weblog/weblog","weblog4");
 
   endwhile;
   wp_reset_postdata();
+  echo "</div>";
+
+  get_template_part("template-parts/pagination");
+
 else:
   echo "پستی یافت نشد";
 
