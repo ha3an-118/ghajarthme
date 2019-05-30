@@ -11,6 +11,7 @@ function ha_register_menu(){
 
   );
   register_nav_menus($arg);
+
 }
 // post per page
 
@@ -30,9 +31,19 @@ add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support('custom-fields');
 
+add_theme_support('custom-header-uploads');
+
 //add post type support
 add_post_type_support( 'page', 'excerpt' );
 add_post_type_support( 'page', 'custom-fields');
+add_post_type_support( 'product', 'custom-header-uploads');
+
+add_theme_support( 'html5', array(
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
 
 add_action( 'widgets_init', 'ha_sidebar_init' );

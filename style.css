@@ -447,6 +447,9 @@ a:hover{
   background: transparent;
   border:none;
 }
+.ha-btn:focus{
+  outline:none;
+}
 .ha-asside-header{
   background-color: var(--color3);
   border:1px solid var(--color1);
