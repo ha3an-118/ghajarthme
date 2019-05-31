@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="utf-8">
+    <title><?php bloginfo("name"); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
@@ -25,51 +26,35 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/hacarpart.css">
 
 
-    <title></title>
+
   </head>
   <body>
     <!-- IDEA: header part  -->
-      <header class="container-fluid dg-header d-flex flex-column flex-md-row justify-content-between dir-ltr">
-        <div class="align-self-md-center text-1 d-flex flex-row dir-ltr py-1 py-md-0 justify-content-around">
+      <header class="container-fluid dg-header d-flex flex-column flex-md-row justify-content-between dir-ltr ">
 
-           <i class="fas fa-phone-volume fa-2x align-self-center ha-spin "></i>
+            <div class="align-self-md-center text-1 d-flex flex-row dir-ltr py-1 py-md-0 justify-content-around pl-4">
 
-           <a href="tell:<?php echo get_option("haTellphoneone"); ?>"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphoneone"); ?></a>
+               <i class="fas fa-phone-volume fa-2x align-self-center ha-spin "></i>
 
-           <i class="fas fa-mobile-alt fa-2x pl-2 align-self-center ha-spin"></i>
-           <a href="tell:<?php echo get_option("haTellphonetwo"); ?>"  class="align-self-center pl-2  text-2 hover-text-11"><?php echo get_option("haTellphonetwo"); ?></a>
-           <div class="align-self-center d-md-none">
-                      <button expandwinid="topnavphone" class="btn" >
-                        <i class="fas fa-search fa-2x fa-border text-11"></i>
-                      </button>
+               <a href="tell:<?php echo get_option("haTellphoneone"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
+                 <?php echo get_option("haTellphoneone"); ?>
+               </a>
+
+               <i class="fas fa-mobile-alt fa-2x pl-2 align-self-center ha-spin"></i>
+               <a href="tell:<?php echo get_option("haTellphonetwo"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
+                 <?php echo get_option("haTellphonetwo"); ?>
+               </a>
+               <div class="align-self-center d-md-none">
+                          <button expandwinid="topnavphone" class="btn" >
+                            <i class="fas fa-search fa-2x fa-border text-11"></i>
+                          </button>
+               </div>
             </div>
-
-         <?php
-         /*
-         $arg_phone_top_menu = array(
-           'menu_class'        => "align-self-center text-1 d-flex flex-row dir-ltr ha-list-style-none",
-           'menu_id'           => "",
-           'container'         => "div",
-           'container_class'   => "d-flex",
-           'container_id'      => "phonemenu",
-           'before'            => '<i class="fa fa-2x fa-headset"></i>',
-           'after'             => "",
-           'link_before'       => "<span class='align-self-center pl-2  text-2 hover-text-11'>",
-           'link_after'        => "</span>",
-           'theme_location'    => "phone-number-menu",
-
-         );
-
-         wp_nav_menu( $arg_phone_top_menu );
-         */
-          ?>
-        </div>
 
 
 
             <div class="d-flex flex-row ha-top-bg dir-rtl">
               <div id="logo" class="align-self-center ha-logo-contianer" >
-                  <!-- <img class="dg-logo" src="pic/logo.png" title="car instrument pertian "> -->
                   <?php the_custom_logo(); ?>
               </div>
               <div class="flg text-2 align-self-center pr-3 ">
@@ -107,12 +92,12 @@
 
               <div class="d-flex flex-row  dir-rtl mx-auto">
                 <div id="logo" class="align-self-center ha-logo-contianer" >
-                    <!-- <img class="dg-logo" src="pic/logo.png" title="car instrument pertian "> -->
+                    
                     <?php the_custom_logo(); ?>
                 </div>
                 <div class="flg text-2 align-self-center pr-3 ">
-                  <span class="text-3">گروه پخش لوازم یدکی </span>
-                  <span class="text-8">پرشین</span>
+                  <span class="text-3"><?php echo get_option("haNameSone"); ?></span>
+                  <span class="text-8"><?php echo get_option("haNameStwo"); ?></span>
                 </div>
 
               </div>
@@ -152,10 +137,10 @@
           <?php
 
           $arg_main_top_menu = array(
-            'menu_class'        => "ha-menu d-flex flex-row  pr-4 fmd ha-list-style-none",
+            'menu_class'        => "ha-menu d-flex flex-row  pr-4 fmd ha-list-style-none m-0",
             'menu_id'           => "",
             'container'         => "div",
-            'container_class'   => "d-flex",
+            'container_class'   => "align-self-center d-flex",
             'container_id'      => "maintopmenu",
             'before'            => '',
             'after'             => "",
@@ -171,10 +156,13 @@
 
 
 
-          <div class="col-4">
+
+
+
+          <div class="col-5">
             <form class="ha-top-search " action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" role="search">
 
-                <input type="search"  class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید" value="<?php echo get_search_query(); ?>" name="s">
+                <input type="search"  class="textinput btn text-right" placeholder="عنوان سرچ خود را وارد کنید" value="<?php echo get_search_query(); ?>" name="s" required>
                 <button type="submit" name="button" class="submitinput btn bg-1 hover-bg-4">
                     <i class="fa fa-search "></i>
                 </button>

@@ -28,7 +28,7 @@
 
       <div class="col-12 col-md-9">
 
-      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="3000"  navigation="true" >
+      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle=""  navigation="true" >
           <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
             <?php
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
@@ -171,7 +171,7 @@
                   <?php
                     $pages = new WP_Query(array(
                       'post_type' => 'page',
-                      'post_per-page' => 0,
+                      'posts_per_page' => -1
 
                     ));
                     if($pages->have_posts()){
@@ -218,7 +218,7 @@
                     <?php
                       $pages = new WP_Query(array(
                         'post_type' => 'page',
-                        'posts_per_page' => 0,
+                        'posts_per_page' => -1
 
                       ));
                       if($pages->have_posts()){

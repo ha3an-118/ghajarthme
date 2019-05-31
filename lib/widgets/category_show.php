@@ -79,6 +79,7 @@
 
         </div>
 
+
         <?php // TODO: must print in number of slide the select form  ?>
         <?php
             for($index=0 ; $index < self::$numberofslide ; $index++):

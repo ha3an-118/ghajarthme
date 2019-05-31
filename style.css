@@ -59,7 +59,14 @@ a:hover{
 
 
 .dg-nav{
-  height: 40px;
+  height: 50px;
+
+}
+@media (min-width: 768px){
+  .dg-nav{
+    height: 50px;
+    box-shadow: 0 0 .1rem var(--color1);
+  }
 }
 /* -------------------------- top search ---------------------------------- */
 .ha-top-search {
@@ -68,12 +75,23 @@ a:hover{
   padding: .2rem;
 
 }
+.ha-top-search:focus{
+  box-shadow: 0 0 .5rem var(--color12);
+}
+.ha-top-search .textinput:focus{
+  background-color: var(--color10);
+}
 .ha-top-search *{
   border-radius: 0 !important;
 
 }
+.ha-top-search *:focus{
+  box-shadow: none !important;
+}
 .ha-top-search .textinput {
   border-top-right-radius: .25rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: .25rem !important;
   flex-grow:1;
   border-right: 1px solid var(--color2);
@@ -83,6 +101,8 @@ a:hover{
 .ha-top-search .submitinput{
   border-top-left-radius: .25rem !important;
   border-bottom-left-radius: .25rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   border-left: 1px solid var(--color2);
   border-top: 1px solid var(--color2);
   border-bottom: 1px solid var(--color2);
@@ -96,11 +116,13 @@ a:hover{
 .dg-baner{
   max-height: auto !important;
   min-height: 70% !important;
+  overflow: hidden !important;
 }
 .dg-baner img{
   width: 100% !important;
-  max-height: 100%;
-  min-height: 100%;
+  max-height: 100% !important;
+  min-height: 100% !important;
+
 }
 .dg-baner-txt {
   position: relative;
@@ -304,7 +326,7 @@ a:hover{
 /* ------------------------------------------------------------ */
 .ha-menu .sub-menu{
   position: absolute;
-  top: 112px;
+  top: 122px;
 
   background-color: var(--color4);
   list-style: none;
@@ -322,14 +344,18 @@ a:hover{
 
 
 }
-
+.ha-menu .sub-menu li{
+  padding: .5rem;
+}
 .ha-menu .sub-menu li:hover{
-  border-bottom: 1px solid var(--color3);
+  /*border-bottom: 1px solid var(--color3);*/
+  background-color: var(--color1);
 }
 .ha-menu li:hover .sub-menu{
   visibility: visible;
   opacity: 1;
   transition-delay: .5s;
+  padding:0 !important;
 }
 
 .ha-menu-phone .sub-menu{

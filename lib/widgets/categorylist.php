@@ -66,6 +66,7 @@ class CatList extends WP_Widget
           $terms = get_terms( array(
                               'taxonomy' => 'products_cat',
                               'hide_empty' => false,
+                              "parent" => (int)$instance["catterm"],
                             ) );
 
           foreach($terms as $term):
@@ -105,6 +106,15 @@ class CatList extends WP_Widget
              name="<?php echo esc_attr($this->get_field_name("numberofcat")); ?>"
              id="<?php echo esc_attr($this->get_field_id("numberofcat")); ?>"
             value="<?php echo (int)$instance["numberofcat"] ?>">
+
+    </p>
+    <p>
+      <label style="align-self:center;"
+            for="<?php echo esc_attr($this->get_field_id("catterm")); ?>">
+              دسته بندی
+      </label>
+      <?php ha_print_category_list("catterm",esc_attr($this->get_field_name("catterm")),"products_cat",$instance) ?>
+
 
     </p>
     <p><hr></p>
