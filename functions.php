@@ -1,6 +1,8 @@
 <?php
 require_once("lib/helper_functions.php");
 require_once("lib/admin/option.php");
+require_once("lib/ajax/saveComment.php");
+
 
 //register menu place
 add_action('init', 'ha_register_menu');

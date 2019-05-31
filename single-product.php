@@ -11,7 +11,7 @@ if(have_posts()):
     the_post();
 
     get_template_part("template-parts/product/product","singlepage");
-    get_template_part("template-parts/getterm");
+
 
 
     $postID = $post->ID;

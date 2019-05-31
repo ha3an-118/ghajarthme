@@ -216,7 +216,7 @@ a:hover{
   height: auto;
 }
 
-.dgnavphone , .ha-baner-pupup{
+.dgnavphone , .ha-baner-pupup ,.comment{
 
       background-image: linear-gradient(to bottom, #3f3f3f , #3e3e3e);
       z-index: 100000;
@@ -227,7 +227,10 @@ a:hover{
       top:0;
       left: 0;
     }
+.comment{
+  background-image: linear-gradient(to bottom, var(--color2) , var(--color12)) !important;
 
+}
 @media (min-width: 576px) {
 
 }
@@ -493,3 +496,6 @@ a:hover{
   height: 100%;
 }
 /* -------------------------------------------------- */
+.overflow-hidden{
+  overflow: hidden;
+}
