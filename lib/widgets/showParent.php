@@ -21,59 +21,62 @@ class ShowParent extends WP_Widget
     $all_terms = array();
     ?>
     <div>
-    <div class="list-group-item  fmd bg-4 text-11 text-right">
+      <div class="list-group-item  fmd bg-4 text-11 text-right">
 
-            <?php echo $instance['title']; ?>
+              <?php echo $instance['title']; ?>
 
-    </div>
-    <?php
+      </div>
+          <?php
+          global $wp_query;
 
-    if(have_posts()):
+          if(have_posts()):
 
-      while(have_posts()):
+            while(have_posts()):
 
-              the_post();
-              $taxs = get_taxonomies();
+                    the_post();
+                    $taxs = get_taxonomies();
 
-              $terms = get_the_terms($post,$taxs);
+                    $terms = get_the_terms($post,$taxs);
 
-              array_push($all_terms,$terms);
+                    array_push($all_terms,$terms);
 
-      endwhile;
-      wp_reset_postdata();
-    else:
-      echo "دسته بندی یافت نشد";
+            endwhile;
+            wp_reset_postdata();
+          else:
+            echo "دسته بندی یافت نشد";
 
-    endif;
-    $all_term_unique = array_unique($all_terms,SORT_REGULAR);
-    $parent_link = array();
+          endif;
+          $all_term_unique = array_unique($all_terms,SORT_REGULAR);
+          $parent_link = array();
+          if(!empty($all_term_unique)):
+              foreach($all_term_unique as $terms):
+                if(!empty($terms)):
+                    foreach($terms as $term):
+                        $temp_parentlink = get_term_parents_list($term->term_id,$term->taxonomy,array(
+                           'separator'=> "-**-",
+                        ));
+                        array_push($parent_link,  $temp_parentlink);
+                    endforeach;
+              endif;
 
-    foreach($all_term_unique as $terms):
+              endforeach;
+          endif;
+          $parent_link = array_unique($parent_link,SORT_REGULAR);
 
-      foreach($terms as $term):
-          $temp_parentlink = get_term_parents_list($term->term_id,$term->taxonomy,array(
-             'separator'=> "-**-",
-          ));
-          array_push($parent_link,  $temp_parentlink);
-      endforeach;
-
-    endforeach;
-
-    $parent_link = array_unique($parent_link,SORT_REGULAR);
-
-    foreach($parent_link as $parents):
-      $paarray = explode("-**-",$parents);
-      $index =0;
-      echo "<ul class='text-right ha-parent-cat'>";
-      foreach($paarray as $temp):
-        if(!empty($temp)):
-          echo "<li class='  pr-".($index*2)."'>".$temp."</li>";
-          $index++;
-        endif;
-      endforeach;
-      echo "<hr>";
-      echo "</ul>";
-    endforeach;
+          foreach($parent_link as $parents):
+            $paarray = explode("-**-",$parents);
+            $index =0;
+            echo "<div class='bg-3 pr-1'>";
+              echo "<ul class='text-right ha-side-list-hiracial'>";
+              foreach($paarray as $temp):
+                if(!empty($temp)):
+                  echo "<li class='text-12 hover-text-11'>".$temp."</li>";
+                  $index++;
+                endif;
+              endforeach;
+              echo "</ul>";
+            echo "</div>";
+          endforeach;
     echo "</div>";
 
 

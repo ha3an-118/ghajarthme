@@ -2,10 +2,11 @@
   /*
   * Template is for shwo pagination on the page
   */
-  global $query;
-  if(isset($query)):
-      $numberofpage =(int)$query->max_num_pages;
+  global $wp_query;
+  if(isset($wp_query)):
+      $numberofpage =(int)$wp_query->max_num_pages;
       if($numberofpage > 1):
+
      ?>
      <div class='d-flex flex-row justify-content-center mt-2'>
        <nav aria-label="Page navigation example">
@@ -16,7 +17,7 @@
                   </a>
               </li>
               <?php for($index=1 ; $index<=$numberofpage; $index++): ?>
-                <?php $link=get_the_permalink().'&paged='.$index; ?>
+                <?php $link=get_pagenum_link($index); ?>
                   <li class="page-item">
                     <a class="page-link text-12 hover-text-8" href="<?php echo $link ?>">
                       <?php echo $index ?>

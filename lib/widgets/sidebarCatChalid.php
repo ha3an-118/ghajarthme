@@ -20,7 +20,7 @@ class sidebarCatChalid extends WP_Widget
 
     $all_terms = array();
     ?>
-    <div class='bg-10 border'>
+    <div class='bg-3 border'>
           <div class="list-group-item  fmd bg-4 text-11 text-right">
 
                 <?php echo $instance['title']; ?>
@@ -106,7 +106,7 @@ class sidebarCatChalid extends WP_Widget
         echo "<ul class='text-right ha-side-list-hiracial'>";
               foreach ($terms as $term) {
 
-                echo "<li class='' title='".$term->description."'><a href=".get_term_link($term->term_id)." class='text-12 hover-text-11'>".$term->name."</a></li>";
+                echo "<li class='' title='".$term->description."'><a href=".get_term_link($term->term_id)." class=''>".$term->name."</a></li>";
                 self::print_child($term->term_id , $taxonomy);
               }
         echo "</ul>";

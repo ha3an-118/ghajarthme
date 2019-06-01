@@ -28,7 +28,7 @@
 
       <div class="col-12 col-md-9">
 
-      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle=""  navigation="true" >
+      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="<?php echo (int)$instance["timeofslide"]*1000 ?>"  navigation="true" >
           <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
             <?php
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
@@ -191,6 +191,10 @@
 
           </select>
         </div>
+        <p>
+
+
+        </p>
         <div class="widefat"  style="display:flex; justify-content:space-between;margin-top:1rem;">
 
           <label style="align-self:center;"
@@ -201,6 +205,20 @@
                  type="number"
                  name="<?php echo esc_attr($this->get_field_name("numberofslide")); ?>"
                  value="<?php echo $instance["numberofslide"]; ?>">
+
+
+
+        </div>
+        <div class="widefat"  style="display:flex; justify-content:space-between;margin-top:1rem;">
+
+          <label style="align-self:center;"
+                for="<?php echo esc_attr($this->get_field_id("timeofslide")); ?>">
+              زمان اسلایدر ثانیه
+          </label>
+          <input id="<?php echo esc_attr($this->get_field_id("timeofslide")); ?>"
+                 type="number"
+                 name="<?php echo esc_attr($this->get_field_name("timeofslide")); ?>"
+                 value="<?php echo $instance["timeofslide"]; ?>">
 
 
 

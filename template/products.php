@@ -13,12 +13,12 @@ else { $paged = 1; }
 
 $arg = array(
   'post_type' => 'product',
-  
+
   'paged'=> $paged,
 );
-global $query;
+global $wp_query;
 
-$query = new WP_Query($arg);
+$wp_query = new WP_Query($arg);
 
 
 ?>
@@ -50,11 +50,11 @@ $query = new WP_Query($arg);
 
 <?php
 
-if($query->have_posts()):
+if($wp_query->have_posts()):
     echo "<div class='d-flex flex-wrap juastify-content-start'>";
-  while($query->have_posts()):
+  while($wp_query->have_posts()):
 
-          $query->the_post();
+          $wp_query->the_post();
 
           get_template_part("template-parts/product/product","item");
 

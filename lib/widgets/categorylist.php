@@ -21,7 +21,7 @@ class CatList extends WP_Widget
     ?>
     <section class="contianer-fluid d-flex flex-column flex-md-row flex-nowrap mt-3">
 
-      <div class="col-12 col-md-9 d-flex justify-content-between flex-wrap">
+      <div class="col-12 col-md-9 d-flex justify-content-center flex-wrap">
 
 
         <?php for($index=0 ; $index<(int)$instance['numberofcat'];$index++):
@@ -29,7 +29,7 @@ class CatList extends WP_Widget
           ?>
 
 
-          <div class="ha-part-cat-item col-5 col-md-3 col-lg-2 d-flex flex-column ha-part-cat-item align-self-start ">
+          <div class="ha-part-cat-item col-5 col-md-3 col-lg-2 d-flex flex-column ha-part-cat-item align-self-start m-2">
 
             <div class="text-center pt-2 col-11 col-md-8 align-self-center">
 
