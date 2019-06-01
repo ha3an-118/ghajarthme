@@ -45,7 +45,7 @@ function ha_print_category_list($name,$widgetName,$taxonomy,$instance){
        <?php
                $items = new WP_Query(array(
                                        'post_type' => $posttype,
-                                       'posts_per_page' => 0,
+                                       'posts_per_page' => -1,
                                      ));
                        if($items->have_posts()):
                          while($items->have_posts()):

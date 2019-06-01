@@ -4,7 +4,7 @@
    */
 
    add_action( 'widgets_init', function() { register_widget( 'LogoCategory' ); } );
-
+   require_once(__DIR__."/../helper_functions.php");
   class LogoCategory extends WP_Widget
   {
     // private static $numberofslide =(!empty($instance['numberofslide']))? $instance['numberofslide'] : 3;
@@ -64,119 +64,36 @@
         ?>
 
 
-        <div class="widefat"  style="display:flex; justify-content:space-between;margin-top:1rem;">
-
-          <label style="align-self:center;"
-                for="<?php echo esc_attr($this->get_field_id("numberofslide")); ?>">
-              تعداد اسلاید
-          </label>
-          <input id="<?php echo esc_attr($this->get_field_id("numberofslide")); ?>"
-                 type="number"
-                 name="<?php echo esc_attr($this->get_field_name("numberofslide")); ?>"
-                 value="<?php echo $instance["numberofslide"]; ?>">
-
-
-
-        </div>
-
-
-        <?php // TODO: must print in number of slide the select form  ?>
+        <p class="widefat"  style="display:flex; justify-content:space-between;margin-top:1rem;">
+            <label style="align-self:center;"
+                  for="<?php echo esc_attr($this->get_field_id("numberofslide")); ?>">
+                تعداد اسلاید
+            </label>
+            <input id="<?php echo esc_attr($this->get_field_id("numberofslide")); ?>"
+                   type="number"
+                   name="<?php echo esc_attr($this->get_field_name("numberofslide")); ?>"
+                   value="<?php echo $instance["numberofslide"]; ?>">
+        </p>
+        <p><hr></p>
+        <p>در این ویجیت شما یک صفحه را با یک دسته بندی مرتبط میکنید</p>
         <?php
             for($index=0 ; $index < self::$numberofslide ; $index++):
 
+
+
               ?>
-                <div class="widefat" style="margin-top:1rem;">
+              <p class="widefat">
+                  <label class="widefat" for="<?php echo esc_attr($this->get_field_id("aboutus")); ?>">
+                      صفحه مورد نظر را انتخاب کنید
+                  </label>
+                  <?php print_posttype_posts_list(esc_attr($this->get_field_name("pageid".$index)),"pageid".$index , "page" ,$instance); ?>
+                  <?php $cat_name = 'catid'.$index; ?>
+                  <label for="<?php echo esc_attr($this->get_field_id($cat_name)); ?>"> دسته بندی مورد نظر را انتخاب کنید</label>
+                  <?php ha_print_category_list($cat_name,esc_attr($this->get_field_name($cat_name)),'products_cat',$instance) ?>
 
-                  <select class="widefat" name="<?php echo esc_attr($this->get_field_name("pageid".$index)); ?>">
-
-                    <?php
-                      $pages = new WP_Query(array(
-                        'post_type' => 'page',
-                        'posts_per_page' => 0,
-
-                      ));
-                      if($pages->have_posts()){
-                        while($pages->have_posts()){
-                          $pages->the_post();
-                          ?>
-                            <option value="<?php the_ID(); ?>"
-                              <?php if( (int)$instance['pageid'.$index]==get_the_ID()) { echo "selected"; } ?>
-                              >
-                                <?php the_title(); ?>
-                            </option>
-                          <?php
-                        }
-                      }
-                      wp_reset_postdata();
-                     ?>
-
-                  </select>
-
-                  <div class="widefat">
-                    <label for="<?php echo esc_attr($this->get_field_id('catid'.$index)); ?>"> دسته بندی مورد نظر را انتخاب کنید</label>
-
-                    <?php
-                    $terms = get_terms( array(
-                                        'taxonomy' => 'products_cat',
-                                        'hide_empty' => true,
-                ) );
-                    echo "<select  class='widefat' name='".$this->get_field_name('catid'.$index)."' id='".$this->get_field_id('catid'.$index)."'>";
-                    foreach($terms as $term):
-
-                      echo "<option value='".$term->term_id."'".((int)$instance['catid'.$index]==$term->term_id?'selected':'').">".$term->name."</option>";
-
-                    endforeach;
-                    echo "</select>";
-
-
-                     ?>
-
-                  </div>
-
-                </div>
-
-              <?php
-
-            endfor;
-
-
-
-
-         ?>
-
-         <!-- <div class="">
-
-          <select class="widefat" name="<?php echo esc_attr($this->get_field_name("pageid")); ?>">
-
-            <?php
-              $pages = new WP_Query(array(
-                'post_type' => 'page',
-                'posts_per_page' => 0,
-
-              ));
-              if($pages->have_posts()){
-                while($pages->have_posts()){
-                  $pages->the_post();
-                  ?>
-                    <option value="<?php the_ID(); ?>"
-                      <?php if( (int)$instance['pageid']==get_the_ID()) { echo "selected"; } ?>
-                      >
-                        <?php the_title(); ?>
-                    </option>
-                  <?php
-                }
-              }
-              wp_reset_postdata();
-             ?>
-
-          </select>
-
-         </div> -->
-
-
-
-        <?php
-     // <!-- echo esc_attr( $this->get_field_name() -->
+              </p>
+              <p><hr></p>
+              <?php endfor;
     }
 
     public function update($new_instance, $old_instance)

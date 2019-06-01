@@ -4,7 +4,7 @@
 * write by hasan abedi from ha3an.ir
 */
 add_action( 'widgets_init', function() { register_widget( 'AboutUs' ); } );
-
+require_once(__DIR__."/../helper_functions.php");
 class AboutUs extends WP_Widget
 {
   public function __construct()
@@ -21,7 +21,6 @@ class AboutUs extends WP_Widget
     $queryArg = array(
                 'page_id' => (int)$instance['aboutus'],
     );
-
 
     $posts = new WP_Query($queryArg);
     if($posts->have_posts()):
@@ -48,51 +47,21 @@ class AboutUs extends WP_Widget
               </div>
 
           </section> <!-- end of  about us section  -->
-
-
-
           <?php
-
       endwhile;
+      wp_reset_postdata();
     endif;
-    wp_reset_postdata();
+
   } // end of widget function
 
   public function form($instance)
   {
-    print_r($instance);
     ?>
-    <div class="widefat">
-      <label class="widefat" for="<?php echo esc_attr($this->get_field_id("aboutus")); ?>">صفحه در باره ما را انتخاب کنید </label>
-      <select class="widefat" id="<?php echo esc_attr($this->get_field_id("aboutus")); ?>"
-              name="<?php echo esc_attr($this->get_field_name("aboutus")); ?>">
-              <?php
-                $pages = new WP_Query(array(
-                  'post_type' => 'page',
-                  'post_per-page' => 0,
-
-                ));
-                if($pages->have_posts()){
-                  while($pages->have_posts()){
-                    $pages->the_post();
-                    ?>
-                      <option value="<?php the_ID(); ?>"
-                        <?php if( (int)$instance['aboutus']==get_the_ID()) { echo "selected"; } ?>
-                        >
-                          <?php the_title(); ?>
-                      </option>
-                    <?php
-                  }
-                }
-                wp_reset_postdata();
-               ?>
-
-      </select>
-    </div>
-
+    <p class="widefat">
+        <label class="widefat" for="<?php echo esc_attr($this->get_field_id("aboutus")); ?>">صفحه در باره ما را انتخاب کنید </label>
+        <?php print_posttype_posts_list(esc_attr($this->get_field_name("aboutus")),"aboutus" , "page" ,$instance); ?>
+    </p>
     <?php
-    echo "this is weblog category";
-     // <!-- echo esc_attr( $this->get_field_name() -->
   }
 
   public function update($new_instance, $old_instance)

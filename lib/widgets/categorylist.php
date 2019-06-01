@@ -61,7 +61,7 @@ class CatList extends WP_Widget
 
       <div class="col-12 col-md-3">
 
-        <ul class="list-group dg-list-group text-right">
+        <ul class="list-group dg-list-group text-right mx-0 px-0">
           <?php
           $terms = get_terms( array(
                               'taxonomy' => 'products_cat',

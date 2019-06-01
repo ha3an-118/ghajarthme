@@ -21,7 +21,7 @@ class SidebarCat extends WP_Widget
 
     $terms = get_terms( array(
                         'taxonomy' => $instance['taxname'],
-                        'hide_empty' => false,
+                        'hide_empty' => true,
 ) );
     ?>
     <ul class="text-right w-100 p-0">
@@ -32,13 +32,24 @@ class SidebarCat extends WP_Widget
       </li>
       <!-- 'before_title', 'after_title',
       'before_widget','after_widget' -->
-      <?php foreach($terms as $term): ?>
+
+      <?php
+        $index=0;
+
+        foreach($terms as $term): ?>
         <li class="list-group-item text-1 hover-text-3 ">
             <a href="<?php echo get_term_link($term); ?>" class="text-2 hover-text-11">
                 <?php echo $term->name ?>
             </a>
         </li>
-      <?php endforeach; ?>
+
+      <?php
+        $index++;
+        if($index>15):
+          break;
+        endif;
+
+        endforeach; ?>
 
 
     </ul>
