@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: weblog page
+* Template Name: news page
 *
 */
 get_header();

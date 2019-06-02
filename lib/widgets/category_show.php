@@ -36,7 +36,7 @@
 
                           $mustshowpage->the_post();?>
 
-                          <div class="car-type-category-item  col-5 col-md-2 bg-1 my-1  ">
+                          <div class="car-type-category-item  col-5 col-md-2  my-1  ">
                             <a href="<?php echo  get_term_link($termid,'products_cat')?>" >
 
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="">

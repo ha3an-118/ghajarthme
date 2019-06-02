@@ -24,11 +24,11 @@
 
       ?>
     <!--         start baner part                   -->
-    <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner dir-ltr">
+    <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner dir-ltr px-0 px-md-3">
 
-      <div class="col-12 col-md-9">
+      <div class="col-12 col-md-9 ">
 
-      <div class="" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="<?php echo (int)$instance["timeofslide"]*1000 ?>"  navigation="true" >
+      <div class="mx-auto" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="<?php echo (int)$instance["timeofslide"]*1000 ?>"  navigation="true" >
           <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
             <?php
               self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];

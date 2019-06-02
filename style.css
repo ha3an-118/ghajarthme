@@ -167,6 +167,10 @@ a:hover{
 
 .car-type-category-item img{
   max-width: 80% !important;
+  opacity: .8;
+}
+.car-type-category-item:hover img{
+  opacity: 1;
 }
 .car-type-category-item a{
   display: flex;
