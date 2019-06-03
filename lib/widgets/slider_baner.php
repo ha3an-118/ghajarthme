@@ -27,58 +27,59 @@
     <section class="contianer-fluid d-flex flex-md-row flex-column mt-2 dg-baner dir-ltr px-0 px-md-3">
 
       <div class="col-12 col-md-9 ">
+        <?php
+        $id = esc_attr($this->get_field_id("topbanerslider"));
+        self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
+        global $index;
 
-      <div class="mx-auto" id="<?php echo esc_attr($this->get_field_id("topbanerslider")); ?>" role="slider"  pagination="true"  cycle="<?php echo (int)$instance["timeofslide"]*1000 ?>"  navigation="true" >
-          <div class="d-flex flex-row flex-nowrap" role="sliderItemsHolder">
-            <?php
-              self::$numberofslide =(empty($instance['numberofslide']))?3:$instance['numberofslide'];
-
-              for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ){
-                    $mustshowpage = new WP_Query(array(
-                                                  'page_id' => (int)$instance['pageid'.$index],
-                                                ));
-
-                    if($mustshowpage->have_posts()):
-                      while ($mustshowpage->have_posts()) :
-
-                          $mustshowpage->the_post();?>
-                          <?php get_template_part("template-parts/widget/widget","slideritem"); ?>
-
-                     <?php
-                      endwhile;//end while
-                   endif;//end if
-                   wp_reset_postdata();
-
-          }//end of for
         ?>
-      </div> <!-- end of  [role="sliderItemsHolder"] -->
-      <div class="" role="sliderNavigation">
+
+        <div id="<?php echo $id; ?>" class="carousel slide">
+              <ol class="carousel-indicators">
+                <?php for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ): ?>
+                      <li data-target="#<?php echo $id; ?>" data-slide-to="<?php echo $index ?>" class="<?php if($index==0){ echo "active";} ?>"></li>
+                <?php endfor; ?>
+              </ol>
 
 
-      <!-- IDEA: pager part  -->
-      <div class="d-none d-md-flex justify-content-center" role="sliderPaginations" content>
+              <div class="carousel-inner">
 
-      </div>
-      <!-- IDEA: next/prevision part -->
-      <div class="slidernextprevrow">
+                <div >
+                  <?php
+                  for( $index=0 ; $index< (int)self::$numberofslide ;$index++ ){
+                        $mustshowpage = new WP_Query(array(
+                                                      'page_id' => (int)$instance['pageid'.$index],
+                                                    ));
 
-            <div class="p-2 bg-1" role="nextslide" >
+                        if($mustshowpage->have_posts()):
+                          while ($mustshowpage->have_posts()) :
 
-                <i class="fa fa-chevron-left fa-lg"></i>
+                              $mustshowpage->the_post();?>
+                              <?php get_template_part("template-parts/widget/widget","slideritem"); ?>
 
-            </div>
+                         <?php
+                          endwhile;//end while
+                       endif;//end if
+                       wp_reset_postdata();
 
-            <div class="p-2 bg-1" role="prevslide">
+                     }//end of for
+              ?>
 
-                <i class="fa fa-chevron-right fa-lg"></i>
+              </div>
 
-            </div>
 
-      </div>
-    </div> <!-- [role=sliderNavigation ] -->
+              <a class="carousel-control-prev" href="#<?php echo $id; ?>" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#<?php echo $id; ?>" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
 
-  </div> <!--  end of [role="slider"] -->
-</div> <!--  end fo .col9 -->
+
+      </div> <!--  end fo .col9 -->
 
 <div class="col-12 col-sm-10 mx-sm-auto col-md-3 d-md-flex justify-content-center d-none ">
 
@@ -149,6 +150,12 @@
 
         $(this).parents('[role=alert]').hide();
 
+      });
+
+      $(document).ready(function(){
+        $('#<?php echo $id ?>').carousel({
+            interval: <?php echo (int)$instance["timeofslide"]*1000 ?>,
+          })
       });
 
 

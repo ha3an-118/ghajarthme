@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fontawesome.css">
 
     <!-- =================================================  -->
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.3.1.js">
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.js">
 
     </script>
     <!-- add slider  -->
@@ -32,23 +33,38 @@
     <!-- IDEA: header part  -->
       <header class="container-fluid dg-header d-flex flex-column flex-md-row justify-content-between dir-ltr ">
 
-            <div class="align-self-md-center text-1 d-flex flex-row dir-ltr py-1 py-md-0 justify-content-around pl-4">
+            <div class="align-self-md-center text-1 d-flex flex-column flex-md-row dir-ltr py-1 py-md-0 justify-content-around pl-4">
 
-               <i class="fas fa-phone-volume fa-2x align-self-center ha-spin "></i>
 
-               <a href="tell:<?php echo get_option("haTellphoneone"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
-                 <?php echo get_option("haTellphoneone"); ?>
-               </a>
+              <div class="align-self-md-center text-1 d-flex flex-row dir-ltr py-1 py-md-0 justify-content-around pl-4">
+                <i class="fas fa-phone-volume fa-2x align-self-center ha-spin "></i>
 
-               <i class="fas fa-mobile-alt fa-2x pl-2 align-self-center ha-spin"></i>
-               <a href="tell:<?php echo get_option("haTellphonetwo"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
-                 <?php echo get_option("haTellphonetwo"); ?>
-               </a>
-               <div class="align-self-center d-md-none">
-                          <button expandwinid="topnavphone" class="btn" >
-                            <i class="fas fa-search fa-2x fa-border text-11"></i>
-                          </button>
-               </div>
+                <a href="tell:<?php echo get_option("haTellphoneone"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
+                  <?php echo get_option("haTellphoneone"); ?>
+                </a>
+
+                <i class="fas fa-mobile-alt fa-2x pl-2 align-self-center ha-spin"></i>
+                <a href="tell:<?php echo get_option("haTellphonetwo"); ?>"  class="align-self-center pl-2  text-2 hover-text-11">
+                  <?php echo get_option("haTellphonetwo"); ?>
+                </a>
+                <div class="align-self-center d-md-none">
+                           <button expandwinid="topnavphone" class="btn" >
+                             <i class="fas fa-search fa-2x fa-border text-11"></i>
+                           </button>
+                </div>
+              </div>
+              <div class="">
+                <small>
+                  &#160;&#160;&#160;
+
+                  <a href=""  class="align-self-center pl-2  text-2 hover-text-11">
+                    <?php echo get_option("haAdress"); ?>
+                  </a>
+                  <i class="fas fa-map-marker-alt fa-2x align-self-center "></i>
+                  </small>
+              </div>
+
+
             </div>
 
 
@@ -92,7 +108,7 @@
 
               <div class="d-flex flex-row  dir-rtl mx-auto">
                 <div id="logo" class="align-self-center ha-logo-contianer" >
-                    
+
                     <?php the_custom_logo(); ?>
                 </div>
                 <div class="flg text-2 align-self-center pr-3 ">
@@ -144,7 +160,7 @@
             'container_id'      => "maintopmenu",
             'before'            => '',
             'after'             => "",
-            'link_before'       => "<span class='text-2 hover-text-11 mr-2'>",
+            'link_before'       => "<span class='text-2 hover-text-11 mx-2'>",
             'link_after'        => "</span>",
             'theme_location'    => "top_main_menu",
 

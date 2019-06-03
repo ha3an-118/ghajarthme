@@ -1,4 +1,5 @@
-    <div class="" role="sliderItemHolder">
+<?php global $index ?>
+    <div class="carousel-item <?php if($index==0){ echo "active";} ?>" >
 
         <?php
         $aparat_link = get_post_meta( get_the_ID(), 'aparat_link');
