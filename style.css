@@ -534,7 +534,9 @@ a:hover{
 .overflow-hidden{
   overflow: hidden;
 }
-
+.overflow-x-hidden{
+  overflow-x: hidden !important;
+}
 /* -------------------------------------------------- */
 .box-shadow{
   box-shadow: 0 0 5px var(--color12);

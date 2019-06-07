@@ -6,7 +6,7 @@ get_header();
 
 ?>
 <!-- start single page  -->
-<section class="container-fluid d-flex  flex-row justify-content-between bg-3 mt-3">
+<section class="container-fluid d-flex  flex-row justify-content-between bg-3 mt-3 overflow-x-hidden">
 
       <div class="ha-asside">
             <div class="bg-3 p-2 d-flex flex-row justify-content-center my-1 ha-asside-header">
