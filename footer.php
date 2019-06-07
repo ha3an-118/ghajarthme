@@ -114,6 +114,11 @@
       $(".ha-container").toggleClass("ha-container-open");
       $(".ha-asside-toggle").toggle();
   }
+  $(document).ready(function(){
+
+    $(".preloading").addClass("display-none").removeClass("preloading");
+    $(".body-overflow").removeClass("body-overflow");
+  });
 
 </script>
 

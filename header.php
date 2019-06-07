@@ -25,11 +25,44 @@
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/expand.js"></script>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/hacarpart.css">
+    <style media="screen">
+        .preloading{
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 9999999;
+          background-color: rgba(64,64,64,.95);
+          overflow: hidden !important;
+        }
+        .display-none{
+          overflow: hidden !important;
+          display: none !important;
+        }
+
+        .body-overflow{
+          overflow: hidden;
+        }
+    </style>
 
 
 
   </head>
-  <body>
+  <body class="body-overflow" >
+    <div class="preloading d-flex flex-column justify-content-center" >
+
+
+      <div class="flg text-2 align-self-center pr-3 ">
+        <span class="">
+          <i class="fas fa-spinner fa-spin text-1"></i>
+        </span>
+        <span><?php echo get_option("haNameSone"); ?> </span>
+        <span class="text-8"><?php echo get_option("haNameStwo") ?></span>
+      </div>
+
+      <!-- this is preloading  -->
+    </div>
     <!-- IDEA: header part  -->
       <header class="container-fluid dg-header d-flex flex-column flex-md-row justify-content-between dir-ltr ">
 

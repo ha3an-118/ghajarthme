@@ -10,6 +10,8 @@ body{
   font-family:nasim !important;
   overflow-x: hidden;
 }
+
+
 /* -------------------------------------------------------------------------*/
 
 .dir-ltr{
@@ -20,6 +22,7 @@ body{
 }
 a{
   text-decoration: none;
+  outline: none !important;
 }
 a:hover{
   text-decoration: none !important ;
@@ -528,4 +531,9 @@ a:hover{
 /* -------------------------------------------------- */
 .overflow-hidden{
   overflow: hidden;
+}
+
+/* -------------------------------------------------- */
+.box-shadow{
+  box-shadow: 0 0 5px var(--color12);
 }

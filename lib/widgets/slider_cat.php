@@ -53,7 +53,7 @@ class SliderCat extends WP_Widget
 
           </div>
 
-          <div class="col-9 p-0" >
+          <div class="col-9 col-md-11 p-0" >
 
             <div class="dg-segustion-group py-3 d-flex flex-row flex-nowrap  " role="sliderItemsHolder">
               <?php

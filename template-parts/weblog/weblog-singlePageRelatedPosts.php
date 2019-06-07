@@ -1,13 +1,13 @@
 <?php
-
-
   $tax = get_taxonomies();
 
-  $terms = get_the_terms($post,$tax);
 
+  $terms = get_the_terms($post,"products_cat");
+  $taxob = get_object_taxonomies($post);
+  print_r($taxob);
+  echo "<hr>";
   $tax_query_arg = array(
         'relation' => 'OR',
-
   );
 
   foreach($terms as $term):
