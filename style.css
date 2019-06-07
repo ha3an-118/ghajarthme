@@ -3,12 +3,14 @@
 html , body{
   height: 100%;
   width: 100%;
+
 }
 body{
   /* background-image: linear-gradient(to bottom,var(--color3),var(--color10));
   background-repeat: no-repeat; */
   font-family:nasim !important;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 
