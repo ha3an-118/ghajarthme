@@ -20,7 +20,7 @@ class SliderWeblog extends WP_Widget
     $queryArg = array(
       'post_type' => 'post',
 
-      'post_per_page' => 10,
+      'posts_per_page' => 10,
 
     );
 

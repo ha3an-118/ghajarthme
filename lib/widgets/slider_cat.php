@@ -26,7 +26,7 @@ class SliderCat extends WP_Widget
             'terms' => (int)$instance['catid'],
           ),
         ),
-      'post_per_page' => 0,
+      'posts_per_page' => -1,
 
     );
 
